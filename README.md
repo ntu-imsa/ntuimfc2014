@@ -7,7 +7,7 @@ The website will be used as the official website of NTU IM Freshman Camp 2014.
 
 - Brief introduction about the Camp
 - Schedule information
-- Application from
+- Application form
 - Staff information
 
 ## Contributer
