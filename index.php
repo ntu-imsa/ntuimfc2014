@@ -3,23 +3,27 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    
+
 <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>學生計算機年會 | Students' Information Technology Conference</title>
-        <meta name="description" content="以學生為本、由學生自發舉辦，SITCON 學生計算機年會不只是學生「學以致用、教學相長」的實際展現，更冀望所有對資訊有興趣的學生，能夠在年會裏齊聚一堂，彼此激盪、傳承、啟發。">
+        <title>台大資管迎新宿營 | Freshman Camp for NTUIM</title>
+<?php
+  define("ACTITLE","台大資管迎新宿營");
+  define("DESCRIPTION", "所以想要參加宿營，想要提早認識大家，想要認識更多學長姐的不要再猶豫，快去報名吧！");
+?>
+        <meta name="description" content="<?php echo DESCRIPTION; ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta property="og:title" content="學生計算機年會">
+        <meta property="og:title" content="<?php echo ACTITLE; ?>">
         <meta property="og:type" content="website">
         <meta property="og:url" content="index.html">
         <meta property="og:image" content="icon-2014-special.jpg">
-        <meta property="og:site_name" content="學生計算機年會">
-        <meta property="og:description" content="以學生為本、由學生自發舉辦，SITCON 學生計算機年會不只是學生「學以致用、教學相長」的實際展現，更冀望所有對資訊有興趣的學生，能夠在年會裏齊聚一堂，彼此激盪、傳承、啟發。">
+        <meta property="og:site_name" content="<?php echo ACTITLE; ?>">
+        <meta property="og:description" content="<?php echo DESCRIPTION; ?>">
 
-        <meta property="twitter:title" content="學生計算機年會">
-        <meta property="twitter:description" content="以學生為本、由學生自發舉辦，SITCON 學生計算機年會不只是學生「學以致用、教學相長」的實際展現，更冀望所有對資訊有興趣的學生，能夠在年會裏齊聚一堂，彼此激盪、傳承、啟發。">
+        <meta property="twitter:title" content="<?php echo ACTITLE; ?>">
+        <meta property="twitter:description" content="<?php echo DESCRIPTION; ?>">
         <meta property="twitter:image:src" content="icon-2014-special.jpg">
         <meta property="twitter:image:width" content="256">
         <meta property="twitter:image:height" content="256">
@@ -90,7 +94,7 @@
           </p>
 
           <p>
-            由學生自發組成、自主籌備、以學生為核心，SITCON 學生計算機年會冀望展現學生最真實的熱情與能量，
+            由學生自發組成、自主籌備、以學生為核心，SITCON 台大資管迎新宿營冀望展現學生最真實的熱情與能量，
             使有成者能夠傳承己身經驗、初學者能對資訊領域有更深入的了解。
             SITCON 2014，請與我們一同激盪創新的靈感、分享實作的經驗，
             並與來自各地的學生共同探求理論與實務的平衡點。
@@ -105,7 +109,7 @@
           <h3>主辦單位</h3>
           －
           <div class="partner">
-            <a class="small button" href="">學生計算機年會</a>
+            <a class="small button" href="">台大資管迎新宿營</a>
           </div>
           <div class="partner">
             <a class="small button" href="http://openfoundry.org/" target="_blank">中研院・資創中心・自由軟體鑄造場</a>
