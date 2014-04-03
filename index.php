@@ -1226,40 +1226,32 @@
   <div class="team-members">
 
     <div class="container">
-      <h2 class="header">總召組</h2>
+      <h2 class="header">召部</h2>
     </div>
     <div class="container">
 
+<?php
+// title,nickname,link,img
+
+$hq = array();
+$hq[] = array('總召','陳劭恩','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150');
+$hq[] = array('副召','涂靖雯','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150');
+$hq[] = array('副召','賴冠廷','#','https://graph.facebook.com/100002315801969/picture?type=large&width=150&height=150');
+
+foreach($hq as $staffData){
+?>
       <aside class="member">
         <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/denny0223" target="_blank"><img alt="Denny Huang" class="round" src="http://www.gravatar.com/avatar/9c08215f31eb6005a25be6521bf47b0a?d=mm&amp;s=150" /></a>
+          <a class="link" href="" target="_blank"><img alt="<?php echo $staffData[1]; ?>" class="round" src="<?php echo $staffData[3]; ?>" /></a>
         </div>
         <h4 class="nickname">
-          Denny Huang
-          <span class="sub-header title">總召</span>
+          <?php echo $staffData[1]; ?>
+          <span class="sub-header title"><?php echo $staffData[0]; ?></span>
         </h4>
       </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/mousems.kuo" target="_blank"><img alt="MouseMs" class="round" src="http://www.gravatar.com/avatar/457cbd33a97ba5dad4cc9b177fad0da6?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          MouseMs
-          <span class="sub-header title">副召</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/j100002ben" target="_blank"><img alt="波卡Poka" class="round" src="http://www.gravatar.com/avatar/296ec9c4dc557c85ef8ca6feaa956c98?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          波卡Poka
-          <span class="sub-header title">行銷贊助</span>
-        </h4>
-      </aside>
-
+<?php
+}
+?>
     </div>
 
     <div class="container">
