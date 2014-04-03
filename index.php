@@ -291,20 +291,60 @@
   </header>
   <div class="team-members">
 
-    <div class="container">
-      <h2 class="header">召部</h2>
-    </div>
-    <div class="container">
-
 <?php
 // title,nickname,link,img
+$deptName=array('召部','隊輔','活動部','庶務部','美宣部','公關部','器材部');
+$deptData=array();
 
-$hq = array();
-$hq[] = array('總召','陳劭恩','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150');
-$hq[] = array('副召','涂靖雯','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150');
-$hq[] = array('副召','賴冠廷','#','https://graph.facebook.com/100002315801969/picture?type=large&width=150&height=150');
+$deptData[] = array(
+  array('總召','陳劭恩','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
+  array('副召','涂靖雯','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
+  array('副召','賴冠廷','#','https://graph.facebook.com/100002315801969/picture?type=large&width=150&height=150')
+);
 
-foreach($hq as $staffData){
+$deptData[] = array(
+  array('總召','陳劭恩','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
+  array('副召','涂靖雯','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
+  array('副召','賴冠廷','#','https://graph.facebook.com/100002315801969/picture?type=large&width=150&height=150')
+);
+
+$deptData[] = array(
+  array('部長','胡哲愷','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
+  array('副部長','梁暉義','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150')
+);
+
+$deptData[] = array(
+  array('總召','陳劭恩','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
+  array('副召','涂靖雯','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
+  array('副召','賴冠廷','#','https://graph.facebook.com/100002315801969/picture?type=large&width=150&height=150')
+);
+
+$deptData[] = array(
+  array('總召','陳劭恩','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
+  array('副召','涂靖雯','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
+  array('副召','賴冠廷','#','https://graph.facebook.com/100002315801969/picture?type=large&width=150&height=150')
+);
+
+$deptData[] = array(
+  array('總召','陳劭恩','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
+  array('副召','涂靖雯','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
+  array('副召','賴冠廷','#','https://graph.facebook.com/100002315801969/picture?type=large&width=150&height=150')
+);
+
+$deptData[] = array(
+  array('總召','陳劭恩','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
+  array('副召','涂靖雯','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
+  array('副召','賴冠廷','#','https://graph.facebook.com/100002315801969/picture?type=large&width=150&height=150')
+);
+
+foreach($deptData as $deptId => $deptDataPer){
+?>
+      <div class="container">
+      <h2 class="header"><?php echo $deptName[$deptId]; ?></h2>
+       </div>
+    <div class="container">
+<?php
+  foreach($deptDataPer as $staffData){
 ?>
       <aside class="member">
         <div class="avatar">
@@ -316,464 +356,12 @@ foreach($hq as $staffData){
         </h4>
       </aside>
 <?php
-}
+  }
 ?>
     </div>
-
-    <div class="container">
-      <h2 class="header">行政組</h2>
-    </div>
-    <div class="container">
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/RSChiang" target="_blank"><img alt="RSChiang" class="round" src="http://www.gravatar.com/avatar/b3ecf4287d58054135af5d7b4d741021?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          RSChiang
-          <span class="sub-header title">行政組長</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/lyc0421" target="_blank"><img alt="影子" class="round" src="http://www.gravatar.com/avatar/6e6bcadb0cf769a8d4f4c02a62c74295?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          影子
-          <span class="sub-header title">行政組社群</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/chandrew1119" target="_blank"><img alt="Ch.Andrew" class="round" src="http://www.gravatar.com/avatar/252ed801f45f55ee05aeced3371dfa45?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          Ch.Andrew
-          <span class="sub-header title">行政組人事</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/Oscar" target="_blank"><img alt="Oscar" class="round" src="http://www.gravatar.com/avatar/c7fc9eee61d15190efcddf8e5bcaabeb?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          Oscar
-          <span class="sub-header title">行政組檔案</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/jeremy5189" target="_blank"><img alt="Jeremy Yen" class="round" src="http://www.gravatar.com/avatar/ea3f65db2b33fad0b573b3c25775f3aa?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          Jeremy Yen
-          <span class="sub-header title">行政組票務</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/elct9620" target="_blank"><img alt="蒼時弦也" class="round" src="http://www.gravatar.com/avatar/888339de9e7a88688b6acb30d33e66cd?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          蒼時弦也
-          <span class="sub-header title">文創股長</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/telutszu" target="_blank"><img alt="Telu" class="round" src="http://www.gravatar.com/avatar/ed0b380561df4f7031c116d3fbe0b653?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          Telu
-          <span class="sub-header title">文創青年</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/oabb1388" target="_blank"><img alt="雁子" class="round" src="http://www.gravatar.com/avatar/d2a390382a4d3d5cf17740ffbd914942?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          雁子
-          <span class="sub-header title">文創青年</span>
-        </h4>
-      </aside>
-
-    </div>
-
-    <div class="container">
-      <h2 class="header">議程組</h2>
-    </div>
-    <div class="container">
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/pellaeon" target="_blank"><img alt="Pellaeon" class="round" src="images/staff/pellaeon.jpg" /></a>
-        </div>
-        <h4 class="nickname">
-          Pellaeon
-          <span class="sub-header title">議程組長</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/lee2041412" target="_blank"><img alt="Miller" class="round" src="http://www.gravatar.com/avatar/f2fad77c24dbbc45e83f2da988d32150?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          Miller
-          <span class="sub-header title">議程組員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/joy1357924680" target="_blank"><img alt="阿飄" class="round" src="http://www.gravatar.com/avatar/13d4847bc8f942c166afb802270f8a16?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          阿飄
-          <span class="sub-header title">議程組員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/a86487817" target="_blank"><img alt="Takeshi" class="round" src="http://www.gravatar.com/avatar/b721195e879c1ccab06a714f9d15b1da?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          Takeshi
-          <span class="sub-header title">議程組員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/every85713" target="_blank"><img alt="泰泰" class="round" src="http://www.gravatar.com/avatar/2d2de640b757b0442eefc95cee106337?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          泰泰
-          <span class="sub-header title">議程組員</span>
-        </h4>
-      </aside>
-
-    </div>
-
-    <div class="container">
-      <h2 class="header">場務組</h2>
-    </div>
-    <div class="container">
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/jim2ylin" target="_blank"><img alt="下午" class="round" src="http://www.gravatar.com/avatar/5bca79fe330ffda61b1f6d5e0b279aeb?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          下午
-          <span class="sub-header title">場務組長</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/c22222200" target="_blank"><img alt="崑元" class="round" src="http://www.gravatar.com/avatar/cadc057afc057373a9675da020663393?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          崑元
-          <span class="sub-header title">場務副組長</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/scwuaptx" target="_blank"><img alt="AngelBoy" class="round" src="http://www.gravatar.com/avatar/cab798ff74597f6784c628b4119bbd2f?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          AngelBoy
-          <span class="sub-header title">門機股長</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/aa48965" target="_blank"><img alt="Kevin-WY" class="round" src="http://www.gravatar.com/avatar/4dbbcd7b93f90eb9dc3a3e8df3610639?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          Kevin-WY
-          <span class="sub-header title">餐飲股長</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/PingNote.Wu" target="_blank"><img alt="小平" class="round" src="http://www.gravatar.com/avatar/c8e554d91577a152d5dadfa0a882c2ad?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          小平
-          <span class="sub-header title">餐飲股員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/a7552005" target="_blank"><img alt="麵包" class="round" src="http://www.gravatar.com/avatar/f4c55d89dbf00d2925c30ff9933eb73f?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          麵包
-          <span class="sub-header title">餐飲股員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/e04e04qwe" target="_blank"><img alt="帝王" class="round" src="http://www.gravatar.com/avatar/b0206a288d398db7a8252ffa14547a07?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          帝王
-          <span class="sub-header title">紀錄股員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/horace.chuang" target="_blank"><img alt="阿霍" class="round" src="http://www.gravatar.com/avatar/cbabc621abdb7c825c5922dfea3c5b4a?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          阿霍
-          <span class="sub-header title">紀錄股員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/yilang22444" target="_blank"><img alt="Breezr" class="round" src="http://www.gravatar.com/avatar/2edb49fbad2ab9658e65bf3e76225f61?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          Breezr
-          <span class="sub-header title">紀錄股員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/littledairylee" target="_blank"><img alt="小代" class="round" src="http://www.gravatar.com/avatar/03941b09baa04ddbce792c1c608d276f?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          小代
-          <span class="sub-header title">紀錄股員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/mr.lin.clarence" target="_blank"><img alt="Clarence" class="round" src="http://www.gravatar.com/avatar/1cef2c5a606938ebad117ba899ee6b5f?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          Clarence
-          <span class="sub-header title">場務組員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/s920128" target="_blank"><img alt="Fish福" class="round" src="http://www.gravatar.com/avatar/74dcbe6cf1c08a5711df7dcaeaabba1e?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          Fish福
-          <span class="sub-header title">場務組員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/chen271005" target="_blank"><img alt="ZLeaf" class="round" src="http://www.gravatar.com/avatar/2d00b3a8dea6699c952d78fad2169bb4?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          ZLeaf
-          <span class="sub-header title">場務組員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/z5678914" target="_blank"><img alt="佳玟" class="round" src="http://www.gravatar.com/avatar/02b8bd75fae0de2e9f32efce1fe9be9d?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          佳玟
-          <span class="sub-header title">場務組員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/ts79614" target="_blank"><img alt="平原" class="round" src="http://www.gravatar.com/avatar/59ed2b60ff923e33cf7637f34854cc64?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          平原
-          <span class="sub-header title">場務組員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/rpedsel" target="_blank"><img alt="意惠" class="round" src="http://www.gravatar.com/avatar/7f832b4c8e9e8cd7654a296760d54e77?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          意惠
-          <span class="sub-header title">場務組員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/banqhsia" target="_blank"><img alt="本本" class="round" src="http://www.gravatar.com/avatar/1d1ebf30851deca68fa5fe5d9ade26b3?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          本本
-          <span class="sub-header title">場務組員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/z82206.cat" target="_blank"><img alt="某貓" class="round" src="http://www.gravatar.com/avatar/e485ea0f9806f55f1c67bbdc3427e3ff?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          某貓
-          <span class="sub-header title">場務組員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/rita912101" target="_blank"><img alt="湘苓" class="round" src="http://www.gravatar.com/avatar/1540ef9d5f16a783c25bdfa33a537d63?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          湘苓
-          <span class="sub-header title">場務組員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/sweets22222" target="_blank"><img alt="糖萱" class="round" src="http://www.gravatar.com/avatar/8de1fcecfb95061dcd76395ab99ad9df?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          糖萱
-          <span class="sub-header title">場務組員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/u8961310" target="_blank"><img alt="蛋糕" class="round" src="http://www.gravatar.com/avatar/9a46bd224238c7e422ff8b2e0ac9a834?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          蛋糕
-          <span class="sub-header title">場務組員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/apple_you_180" target="_blank"><img alt="雯雯" class="round" src="http://www.gravatar.com/avatar/66459b917fe15fb5c1465c7746417078?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          雯雯
-          <span class="sub-header title">場務組員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/kira_forever0205" target="_blank"><img alt="雨夜" class="round" src="http://www.gravatar.com/avatar/350f5c20d8f15becca7e5ba1606ea58f?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          雨夜
-          <span class="sub-header title">場務組員</span>
-        </h4>
-      </aside>
-
-    </div>
-
-    <div class="container">
-      <h2 class="header">財務組</h2>
-    </div>
-    <div class="container">
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/linroex" target="_blank"><img alt="聽風" class="round" src="http://www.gravatar.com/avatar/3c55fae3843681f1452761396c6a417f?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          聽風
-          <span class="sub-header title">財務組長</span>
-        </h4>
-      </aside>
-
-    </div>
-
-    <div class="container">
-      <h2 class="header">線路組</h2>
-    </div>
-    <div class="container">
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/HenryYang" target="_blank"><img alt="Henry" class="round" src="http://www.gravatar.com/avatar/e48646638717edea3b110182c4f47a36?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          Henry
-          <span class="sub-header title">線路組長</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/ming" target="_blank"><img alt="Ming" class="round" src="http://www.gravatar.com/avatar/4f1090c3d5990957bfbaf7b35d5e4e71?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          Ming
-          <span class="sub-header title">線路組員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/frankwu100" target="_blank"><img alt="FrankWu" class="round" src="http://www.gravatar.com/avatar/240e508e56aa36c32fcffadeff0a9ee3?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          FrankWu
-          <span class="sub-header title">線路組員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/pantc12" target="_blank"><img alt="PTC" class="round" src="http://www.gravatar.com/avatar/4a547dab70df0fb8527adad52a989496?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          PTC
-          <span class="sub-header title">線路組員</span>
-        </h4>
-      </aside>
-
-      <aside class="member">
-        <div class="avatar">
-          <a class="link" href="http://me.sitcon.org/conanphone4869" target="_blank"><img alt="Conan" class="round" src="http://www.gravatar.com/avatar/845f079b40d6a3d8addfea79d14b154e?d=mm&amp;s=150" /></a>
-        </div>
-        <h4 class="nickname">
-          Conan
-          <span class="sub-header title">線路組員</span>
-        </h4>
-      </aside>
-
-    </div>
+<?php
+}
+?>
 
   </div>
 </div>
