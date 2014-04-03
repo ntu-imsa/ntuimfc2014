@@ -105,7 +105,7 @@
           <h3>主辦單位</h3>
           －
           <div class="partner">
-            <a class="small button" href="../index.html">學生計算機年會</a>
+            <a class="small button" href="">學生計算機年會</a>
           </div>
           <div class="partner">
             <a class="small button" href="http://openfoundry.org/" target="_blank">中研院・資創中心・自由軟體鑄造場</a>
