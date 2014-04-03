@@ -783,7 +783,7 @@ foreach($hq as $staffData){
         <footer id="footer">
           <div id="copyright">
             <div class="container">
-              &copy; 2014 Students’ Information Technology Conference
+              &copy; 2014 Department of Information Management, National Taiwan University
             </div>
           </div>
           <div id="hyperlink">
