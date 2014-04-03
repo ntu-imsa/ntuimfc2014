@@ -53,7 +53,7 @@
     <h1>
       台大資管迎新宿營
       <span class="small sub-header as-block">Freshman Camp for NTUIM</span>
-      <span class="sub-header as-block">全面啟動</span>
+      <span class="sub-header as-block">IM 106 x IM 107</span>
     </h1>
     <a class="glowing button" href="http://goo.gl/V3jzlh" target="_blank">立即報名</a>
   </div>
