@@ -122,10 +122,9 @@
     NAVIGATION: 1,
     ABOUT: 2,
     LOCATION: 3,
-    SPEAKER: 4,
-    SCHEDULE: 5,
-    SPONSOR: 6,
-    TEAM: 7
+    SCHEDULE: 4,
+    SPONSOR: 5,
+    TEAM: 6
   };
 
   page = sections.create({
@@ -238,52 +237,20 @@
     }
   });
 
-  page.section(SECTIONS.SPEAKER, function(section) {
-    var index, speaker, speakers, speakersCount, start, transitions, _i, _len;
-
-    transitions = [];
-    speakers = $("#speaker .speaker");
-    speakersCount = speakers.length;
-    for (index = _i = 0, _len = speakers.length; _i < _len; index = ++_i) {
-      speaker = speakers[index];
-      start = 20 + index * (100 / speakersCount);
-      transitions.push({
-        target: speaker,
-        start: start,
-        end: start + 50,
-        key: 'opacity',
-        from: 0,
-        to: 1
-      });
-      transitions.push({
-        target: speaker,
-        start: start,
-        end: start + 50,
-        key: 'transform',
-        from: 100,
-        to: 0,
-        format: "translateY(%spx)",
-        afterCalculate: function(val) {
-          return val = (val / 100) * screenWidth;
-        }
-      });
-    }
-    section.on("scrollIn", function() {
-      return setMenuActiveItem(2);
-    });
-    if (tablet) {
-      return section.transitions(transitions);
-    }
-  });
-
   page.section(SECTIONS.SCHEDULE, function(section) {
     var transitions;
 
     transitions = [];
     section.on("scrollIn", function() {
-      return setMenuActiveItem(3);
+      return setMenuActiveItem(2);
     });
     return section.transitions(transitions);
+  });
+
+  page.section(SECTIONS.SPONSOR, function(section) {
+    return section.on("scrollIn", function() {
+      return setMenuActiveItem(3);
+    });
   });
 
   page.section(SECTIONS.TEAM, function(section) {

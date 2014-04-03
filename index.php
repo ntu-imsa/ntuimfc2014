@@ -47,11 +47,11 @@
   <div class="inner">
     <div id="logo">Students' Information Technology Conference</div>
     <h1>
-      學生計算機年會
-      <span class="small sub-header as-block">Students' Information Technology Conference</span>
-      <span class="sub-header as-block">學生與創新實作</span>
+      台大資管迎新宿營
+      <span class="small sub-header as-block">Freshman Camp for IM Department, National Taiwan University</span>
+      <span class="sub-header as-block">全面啟動</span>
     </h1>
-    <a class="glowing button" href="http://goo.gl/V3jzlh" target="_blank">會後意見調查表</a>
+    <a class="glowing button" href="http://goo.gl/V3jzlh" target="_blank">立即報名</a>
   </div>
 </div>
 <div id="scroll-down-notice">
@@ -1730,7 +1730,7 @@
           </div>
           <div id="hyperlink">
             <div class="container">
-              <a class="small glowing button" href="https://www.facebook.com/SitconTW" target="_blank">Facebook</a>
+              <a class="small glowing button" href="https://www.facebook.com/NTUIMSA" target="_blank">Facebook</a>
             </div>
           </div>
         </footer>
