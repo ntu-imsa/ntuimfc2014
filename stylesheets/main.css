@@ -1078,42 +1078,6 @@ html {
 	color: #8d59b0
 }
 
-.talk.link {
-	display: inline-block;
-	padding: 0.25em 1em;
-	margin-right: 0.5em;
-	text-decoration: none;
-	color: #fff;
-	background: #7cb059;
-	letter-spacing: 0.1em;
-	text-shadow: 0px 0px 3px rgba(255,255,255,0.5);
-	-webkit-border-radius: 0px 0px 5px 0px;
-	-moz-border-radius: 0px 0px 5px 0px;
-	-ms-border-radius: 0px 0px 5px 0px;
-	-o-border-radius: 0px 0px 5px 0px;
-	border-radius: 0px 0px 5px 0px;
-	-webkit-transition: 100ms ease-in;
-	-moz-transition: 100ms ease-in;
-	-o-transition: 100ms ease-in;
-	transition: 100ms ease-in;
-	margin-top: 0.225em;
-	padding-top: 0.375em;
-	padding-bottom: 0.375em;
-	margin-bottom: 0.225em
-}
-
-.talk.link:hover,.talk.link:focus,.talk.link:active {
-	color: #fff;
-	text-shadow: none;
-	-webkit-box-shadow: 0px 0px 5px #7cb059;
-	-moz-box-shadow: 0px 0px 5px #7cb059;
-	box-shadow: 0px 0px 5px #7cb059
-}
-
-.talk.link:visited {
-	color: #fff
-}
-
 .team-members .header {
 	padding: 0.5em;
 	color: #fff;
