@@ -1753,5 +1753,4 @@
         <script src="javascripts/main.js"></script>
     </body>
 
-<!-- Mirrored from sitcon.org/2014/ by HTTrack Website Copier/3.x [XR&CO'2013], Tue, 01 Apr 2014 01:03:23 GMT -->
 </html>
