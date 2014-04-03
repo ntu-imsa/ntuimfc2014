@@ -130,7 +130,7 @@
   <div id="location-information">
     <div class="container">
       <div class="information">
-        <span class="date">2014 年 3 月 15 日 /</span><span class="location"> 中央研究院 人文社會科學館</span>
+        <span class="date">2014 年 8 月 X 日 /</span><span class="location"> 台灣大學</span>
       </div>
       <div class="sitcon-jiang">
         <img id="sitcon-jiang-at-map" src="images/sitcon_at_map.png" width="177" height="463" alt="SITCON 醬 Q 版" />

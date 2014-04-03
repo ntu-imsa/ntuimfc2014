@@ -18,12 +18,11 @@
 
   $menuItems = $menu.children('.item');
 
-  $menuItem = [$($menuItems[0]), $($menuItems[1]), $($menuItems[2]), $($menuItems[3]), $($menuItems[4]), $($menuItems[5])];
+  $menuItem = [$($menuItems[0]), $($menuItems[1]), $($menuItems[2]), $($menuItems[3]), $($menuItems[4])];
 
   $sections = {
     "#about": $("#about"),
     "#location": $("#location"),
-    "#speaker": $("#speaker"),
     "#schedule": $("#schedule"),
     "#sponsor": $("#sponsor"),
     "#team": $("#team")
@@ -90,7 +89,7 @@
   loadMap = function() {
     var map, mapLatLng, mapOptions, marker;
 
-    mapLatLng = new google.maps.LatLng(25.0410096, 121.6118796);
+    mapLatLng = new google.maps.LatLng(25.017918, 121.537798);
     mapOptions = {
       center: mapLatLng,
       zoom: 15,
@@ -287,15 +286,9 @@
     return section.transitions(transitions);
   });
 
-  page.section(SECTIONS.SPONSOR, function(section) {
-    return section.on("scrollIn", function() {
-      return setMenuActiveItem(4);
-    });
-  });
-
   page.section(SECTIONS.TEAM, function(section) {
     return section.on("scrollIn", function() {
-      return setMenuActiveItem(5);
+      return setMenuActiveItem(4);
     });
   });
 
@@ -307,11 +300,6 @@
   $window.ready(function() {
     page.init();
     loadMap();
-    if (window.btoa) {
-      window.sitcon_secret = window.btoa("   _______________________  _  __\n  / __/  _/_  __/ ___/ __ \/ |/ /\n _\ \_/ /  / / / /__/ /_/ /    / \n/___/___/ /_/  \___/\____/_/|_/  ");
-      console.log(window.atob(sitcon_secret));
-      return console.log("SGVsbG8lMkMlMjAlRTUlQTYlODIlRTYlOUUlOUMlRTQlQkQlQTAlRTYlOTglQUYlRTUlQUQlQjglRTclOTQlOUYlRUYlQkMlOEMlRTYlQUQlQTElRTglQkYlOEUlRTUlOEElQTAlRTUlODUlQTUlRTQlQjklOEIlRTUlQkUlOEMlRTUlOEQlQjMlRTUlQjAlODclRTYlODglOTAlRTclQUIlOEIlRTclOUElODQlMjBTSVRDT04lMjAlRTUlQjglQjglRTUlODIlOTklRTclQjUlODQlRTUlODglQTUlRUYlQkMlOEQlRTglQTYlOTYlRTglQTYlQkElRTUlQjAlOEYlRTclQjUlODQlRUYlQkMlOEMlRTclODIlQkElRTUlQkUlODAlRTUlQkUlOEMlRTclOUElODQlMjBTSVRDT04lMjAlRTglODglODclRTclOUIlQjglRTklOTclOUMlRTYlQjQlQkIlRTUlOEIlOTUlRTUlODclQkElRTQlQjglODAlRTQlQkIlQkQlRTUlOEElOUIlRUYlQkMlOEMlRTUlQTYlODIlRTYlOUUlOUMlRTYlOTglQUYlRTYlQTUlQUQlRTclOTUlOEMlRTQlQkElQkElRTUlQTMlQUIlRUYlQkMlOEMlRTQlQjklOUYlRTYlQUQlQTElRTglQkYlOEUlRTYlODglOTAlRTclODIlQkElRTYlODglOTElRTUlODAlOTElRTclOUElODQlRTklQTElQTclRTUlOTUlOEYlRTMlODAlODIlMjAlRTclOUIlQjQlRTYlOEUlQTUlRTUlOUMlQTglMjBGYWNlYm9vayUyMCVFNCVCOCU4QSVFOCU4MSVBRiVFNyVCNSVBMSVFOCU5MiVCQyVFNiU5OSU4MiVFNSU4RCVCMyVFNSU4RiVBRiVFRiVCQyU5QWh0dHAlM0ElMkYlMkZmYi5tZSUyRmVsY3Q5NjIw");
-    }
   });
 
 }).call(this);
