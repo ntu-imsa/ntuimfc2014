@@ -259,7 +259,7 @@ html {
 	position: relative;
 	padding-top: 112.5%;
 	overflow: hidden;
-	background: url('../images/inception%401x0120.jpg') center
+	background: url('../images/inception.jpg') center
 }
 
 @media (min-width: 48em) {
@@ -301,7 +301,7 @@ html {
 
 #logo {
 	height: 4em;
-	background: url('../images/logo.png') center no-repeat;
+	background: url('../images/logo.svg?ab') center no-repeat;
 	text-indent: -119988px;
 	overflow: hidden;
 	text-align: left
