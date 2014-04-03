@@ -243,31 +243,31 @@
 
       <aside class="sponsor">
         <div class="logo">
-          <a href="http://www.archilife.org/" target="_blank"><img src="images/sponsors/archilife.png" /></a>
+          <a href="#" target="_blank"><img src="images/sponsors/archilife.png" /></a>
         </div>
         <h3>
-          祐生研究基金會
-          <span class="sub-header">糟糕，右邊兩個都好有哏</span>
+          Paul Gomez Hopkins
+          <span class="sub-header">險制寶一南子邊在關</span>
         </h3>
       </aside>
 
       <aside class="sponsor">
         <div class="logo">
-          <a href="http://kktix.com/" target="_blank"><img src="images/sponsors/kktix.png" /></a>
+          <a href="#" target="_blank"><img src="images/sponsors/kktix.png" /></a>
         </div>
         <h3>
-          KKTIX 售票亭
-          <span class="sub-header">今年你們也推不倒</span>
+          發源祥
+          <span class="sub-header">產生收一土他</span>
         </h3>
       </aside>
 
       <aside class="sponsor">
         <div class="logo">
-          <a href="http://www.justfont.com/" target="_blank"><img src="images/sponsors/justfont.png" /></a>
+          <a href="#" target="_blank"><img src="images/sponsors/justfont.png" /></a>
         </div>
         <h3>
-          justfont 就是字
-          <span class="sub-header">網頁還沒開完字體就讀好了</span>
+          Curry 義優順
+          <span class="sub-header">腦心們中色錢基談預部帶車叫</span>
         </h3>
       </aside>
 
@@ -275,7 +275,7 @@
     <div class="container">
       <div class="inline list">
         <h3 class="inline header">特別感謝</h3>
-        <span class="inline sponsor">華禎有限公司</span>
+        <span class="inline sponsor">宏浩光和有限公司</span>
       </div>
     </div>
   </div>
