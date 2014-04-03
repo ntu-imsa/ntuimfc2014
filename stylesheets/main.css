@@ -974,57 +974,6 @@ html {
 	min-height: 100%
 }
 
-.speaker {
-	margin-bottom: 3.5em
-}
-
-.speaker .avatar.column {
-	text-align: center;
-	width: 100%;
-	float: left;
-	margin-right: 5.26316%;
-	display: inline
-}
-
-@media (min-width: 48em) {
-	.speaker .avatar.column {
-		width: 10.25641%;
-		float: left;
-		margin-right: 2.5641%
-	}
-}
-
-@media (min-width: 64em) {
-	.speaker .avatar.column {
-		width: 23.72881%;
-		float: left;
-		margin-right: 1.69492%
-	}
-}
-
-.speaker .biography.column {
-	width: 100%;
-	float: left;
-	margin-right: 5.26316%;
-	display: inline
-}
-
-@media (min-width: 48em) {
-	.speaker .biography.column {
-		width: 61.53846%;
-		float: right;
-		margin-right: 0
-	}
-}
-
-@media (min-width: 64em) {
-	.speaker .biography.column {
-		width: 74.57627%;
-		float: right;
-		margin-right: 0
-	}
-}
-
 .avatar img {
 	-webkit-box-shadow: 2px 2px 5px #f2f2f2;
 	-moz-box-shadow: 2px 2px 5px #f2f2f2;
@@ -1055,27 +1004,6 @@ html {
 	-ms-border-radius: 50%;
 	-o-border-radius: 50%;
 	border-radius: 50%
-}
-
-.biography {
-	font-family: "xingothic-tc-w4","XinGothic-TC W4","LantingHei TC","Apple LiGothic","Microsoft JhengHei",sans-serif;
-	font-size: 0.875em;
-	line-height: 1.8em
-}
-
-.biography h3 {
-	font-family: "xingothic-tc-w4","XinGothic-TC W4","LantingHei TC","Apple LiGothic","Microsoft JhengHei",sans-serif;
-	font-size: 1.28571em;
-	line-height: 1.4em
-}
-
-.biography a {
-	color: #6fa24d;
-	text-decoration: none
-}
-
-.biography a:hover,.biography a:visited {
-	color: #8d59b0
 }
 
 .team-members .header {
