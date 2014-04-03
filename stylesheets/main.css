@@ -1394,7 +1394,7 @@ html {
 	line-height: 2.14286em
 }
 
-.session .speaker {
+.speaker {
 	padding: 0.5em;
 	color: #fff;
 	background: #597cb0;
@@ -1433,33 +1433,25 @@ html {
 	*zoom: 1
 }
 
-.session .tag {
+.tag {
 	display: inline-block;
-	padding: 1.5em;
+	padding: 3em;
 	margin-right: 0.5em;
 	color: #fff;
 	background: #7cb059;
-	-webkit-transform: skewX(-45deg);
+/*	-webkit-transform: skewX(-45deg);
 	-moz-transform: skewX(-45deg);
 	-ms-transform: skewX(-45deg);
 	-o-transform: skewX(-45deg);
 	transform: skewX(-45deg);
+*/
 	margin-top: 0.375em;
 	padding-top: 0em;
 	padding-bottom: 0em;
 	margin-bottom: 0.375em;
-	font-size: 0.875em;
+	font-size: 1em;
 	line-height: 2.14286em
 }
-
-.session .tag .inner {
-	-webkit-transform: skewX(45deg);
-	-moz-transform: skewX(45deg);
-	-ms-transform: skewX(45deg);
-	-o-transform: skewX(45deg);
-	transform: skewX(45deg)
-}
-
 .session .tag:last-child {
 	margin-right: 1em
 }
