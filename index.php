@@ -150,9 +150,7 @@
     </div>
   </header>
   
-            <div class="container">
-              <div class="row">
-                <div class="span12 mobile8">
+            <div class="">
                   <table id="schedule-table" class="" style="text-align:center;width:80%;margin:auto;">
                     <thead>
                       <th width="25%" class="session block">Time</th>
@@ -226,9 +224,6 @@
                       </tr>
                     </tbody>
                   </table>
-
-                </div>
-              </div>
             </div>
 </section>
 <section id="sponsor" class="section as-page">
