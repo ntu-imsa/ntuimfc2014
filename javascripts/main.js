@@ -54,7 +54,7 @@
     resetMenuActiveItem();
     $menuItem[index].addClass("active");
     hash = $menuItem[index].children('a').attr('href');
-    return ga('send', 'pageview', "/2014/" + hash);
+    return ga('send', 'pageview', "/freshman/" + hash);
   };
 
   $window.on('resize', function() {
@@ -72,7 +72,7 @@
 
     targetScrollTop = $sections[e.target.hash].offset().top;
     $window.scrollTo(targetScrollTop - 55, 1000);
-    ga('send', 'pageview', "/2014/" + e.target.hash);
+    ga('send', 'pageview', "/freshman/" + e.target.hash);
     return e.preventDefault();
   });
 
