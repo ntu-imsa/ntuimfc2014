@@ -108,14 +108,14 @@
           <h3>主辦單位</h3>
           －
           <div class="partner">
-            <a class="small button">臺大資管系學會</a>
+            <a class="small button">臺灣大學資管系學生會</a>
           </div>
         </div>
         <div class="partner-list">
           <h3>協辦單位</h3>
           －
           <div class="partner">
-            <a class="small button">臺大資管系</a>
+            <a class="small button">臺灣大學資管系</a>
           </div>
         </div>
       </div>
