@@ -292,29 +292,29 @@ $deptName=array('召部','隊輔','幹部群');
 $deptData=array();
 
 $deptData[] = array(
-  array('總召','陳劭恩','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
-  array('副召','涂靖雯','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
-  array('副召','賴冠廷','#','https://graph.facebook.com/100002315801969/picture?type=large&width=150&height=150')
+  array('總召','陳劭恩','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
+  array('副召','涂靖雯','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
+  array('副召','賴冠廷','https://graph.facebook.com/100002315801969/picture?type=large&width=150&height=150')
 );
 
 $deptData[] = array(
-  array('總召','陳劭恩','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
-  array('副召','涂靖雯','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
-  array('副召','賴冠廷','#','https://graph.facebook.com/100002315801969/picture?type=large&width=150&height=150')
+  array('總召','陳劭恩','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
+  array('副召','涂靖雯','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
+  array('副召','賴冠廷','https://graph.facebook.com/100002315801969/picture?type=large&width=150&height=150')
 );
 
 $deptData[] = array(
-  array('活動部 部長','胡哲愷','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
-  array('活動部 副部長','梁暉義','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
-  array('庶務部 部長','李慶宏','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
-  array('庶務部 副部長','冷俊瑩','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
-  array('美宣部 部長','劉育婷','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
-  array('美宣部 副部長','陳君儒','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
-  array('公關部 部長','朱瑤章','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
-  array('公關部 副部長','楊大為','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
-  array('器材部 部長','江孟軒','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
-  array('資訊部 部長','虞翔皓','#','https://graph.facebook.com/lolicon.fish/picture?type=large&width=150&height=150'),
-  array('資訊部 副部長','宋欣馨','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150')
+  array('活動部 部長','胡哲愷','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
+  array('活動部 副部長','梁暉義','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
+  array('庶務部 部長','李慶宏','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
+  array('庶務部 副部長','冷俊瑩','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
+  array('美宣部 部長','劉育婷','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
+  array('美宣部 副部長','陳君儒','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
+  array('公關部 部長','朱瑤章','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
+  array('公關部 副部長','楊大為','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
+  array('器材部 部長','江孟軒','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
+  array('資訊部 部長','虞翔皓','https://graph.facebook.com/lolicon.fish/picture?type=large&width=150&height=150'),
+  array('資訊部 副部長','宋欣馨','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150')
 );
 
 foreach($deptData as $deptId => $deptDataPer){
@@ -328,7 +328,7 @@ foreach($deptData as $deptId => $deptDataPer){
 ?>
       <aside class="member">
         <div class="avatar">
-          <a class="link" href="" target="_blank"><img alt="<?php echo $staffData[1]; ?>" class="round" src="<?php echo $staffData[3]; ?>" /></a>
+          <a class="link" target="_blank"><img alt="<?php echo $staffData[1]; ?>" class="round" src="<?php echo $staffData[2]; ?>" /></a>
         </div>
         <h4 class="nickname">
           <?php echo $staffData[1]; ?>
