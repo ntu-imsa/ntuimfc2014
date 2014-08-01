@@ -149,7 +149,7 @@
       <h2>Schedule</h2>
     </div>
   </header>
-  
+
             <div class="">
                   <table id="schedule-table" class="" style="text-align:center;width:80%;margin:auto;">
                     <thead>
@@ -161,7 +161,7 @@
                     <tbody>
                       <tr>
                         <th class="session block">07:00</th>
-                        <td rowspan="2"></td>
+                        <td rowspan="2">此為去年(2013)時間表<br>僅供參考</td>
                         <td class="session block" colspan="2"><h4>整裝待發</h4></td>
                       </tr>
                       <tr>
@@ -288,7 +288,7 @@
 
 <?php
 // title,nickname,link,img
-$deptName=array('召部','隊輔','活動部','庶務部','美宣部','公關部','器材部');
+$deptName=array('召部','隊輔','活動部','庶務部','美宣部','公關部','器材部','資訊部');
 $deptData=array();
 
 $deptData[] = array(
@@ -309,27 +309,27 @@ $deptData[] = array(
 );
 
 $deptData[] = array(
-  array('總召','陳劭恩','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
-  array('副召','涂靖雯','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
-  array('副召','賴冠廷','#','https://graph.facebook.com/100002315801969/picture?type=large&width=150&height=150')
+  array('總召','李慶宏','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
+  array('副召','冷俊瑩','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
 );
 
 $deptData[] = array(
-  array('總召','陳劭恩','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
-  array('副召','涂靖雯','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
-  array('副召','賴冠廷','#','https://graph.facebook.com/100002315801969/picture?type=large&width=150&height=150')
+  array('總召','劉育婷','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
+  array('副召','陳君儒','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
 );
 
 $deptData[] = array(
-  array('總召','陳劭恩','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
-  array('副召','涂靖雯','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
-  array('副召','賴冠廷','#','https://graph.facebook.com/100002315801969/picture?type=large&width=150&height=150')
+  array('總召','朱瑤章','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
+  array('副召','楊大為','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
 );
 
 $deptData[] = array(
-  array('總召','陳劭恩','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
-  array('副召','涂靖雯','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
-  array('副召','賴冠廷','#','https://graph.facebook.com/100002315801969/picture?type=large&width=150&height=150')
+  array('部長','江孟軒','#','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
+);
+
+$deptData[] = array(
+  array('部長','虞翔皓','#','https://graph.facebook.com/lolicon.fish/picture?type=large&width=150&height=150'),
+  array('副部長','宋欣馨','#','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
 );
 
 foreach($deptData as $deptId => $deptDataPer){
