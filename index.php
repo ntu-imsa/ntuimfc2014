@@ -391,5 +391,23 @@ foreach($deptData as $deptId => $deptDataPer){
 <?php
 });
 
+$app->get('/login', function(){
+
+  $facebook = getFacebook();
+
+});
+
+$app->get('/register', function(){
+
+  $facebook = getFacebook();
+
+});
+
+$app->post('/register', function(){
+
+  //
+
+});
+
 $app->run();
 ?>
