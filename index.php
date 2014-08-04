@@ -1,7 +1,20 @@
 <?php
+require 'config.php';
 require 'vendor/autoload.php';
 
 $app = new \Slim\Slim();
+
+function getFacebook(){
+	$facebook = new Facebook(array('appId' => FB_APPID, 'secret' => FB_APPSECRET));
+	return $facebook;
+}
+
+function getDatabaseConnection() {
+  $dbh = new PDO(
+		"mysql:host=". DBHOST. ";dbname=". DBNAME. ";charset=utf8", DBUSER, DBPASS);
+  $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  return $dbh;
+}
 
 $app->get('/', function(){
 ?>
