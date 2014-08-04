@@ -1,3 +1,10 @@
+<?php
+require 'vendor/autoload.php';
+
+$app = new \Slim\Slim();
+
+$app->get('/', function(){
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -375,3 +382,8 @@ foreach($deptData as $deptId => $deptDataPer){
     </body>
 
 </html>
+<?php
+});
+
+$app->run();
+?>
