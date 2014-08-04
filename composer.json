@@ -1,6 +1,6 @@
 {
     "require": {
+        "facebook/php-sdk": "dev-master",
         "slim/slim": "2.*"
     }
 }
-
