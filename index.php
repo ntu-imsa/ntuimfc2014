@@ -394,6 +394,25 @@ foreach($deptData as $deptId => $deptDataPer){
 $app->get('/login', function(){
 
   $facebook = getFacebook();
+  $user = $facebook->getUser();
+
+  if($user){
+
+    // Already logged in
+
+    $user_profile = $facebook->api('/me','GET');
+    print_r($user_profile);
+
+  }else{
+
+    // Redirect to login url
+    $loginurl = $facebook->getLoginUrl();
+    header("Location: $loginurl");
+    echo "<html><head>";
+    echo "<meta http-equiv=\"refresh\" content=\"0;url=$loginurl\" />";
+    echo '</head></html>';
+
+  }
 
 });
 
