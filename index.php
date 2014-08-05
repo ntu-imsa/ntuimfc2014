@@ -413,6 +413,18 @@ $app->get('/login', function() use($app){
 $app->get('/register', function(){
 
   $facebook = getFacebook();
+  $user = $facebook->getUser();
+
+  if($user){
+
+    $user_profile = $facebook->api('/me','GET');
+    print_r($user_profile);
+
+  }else{
+
+    // Not logged in
+
+  }
 
 });
 
