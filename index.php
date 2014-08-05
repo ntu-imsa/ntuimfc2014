@@ -420,6 +420,58 @@ $app->get('/register', function(){
     $user_profile = $facebook->api('/me','GET');
     print_r($user_profile);
 
+    $currentLink = './register';
+    include './lib/header.php';
+
+?>
+        <br>
+        <label>
+        Facebook 帳號:</label>
+        <div class="row-fluid">
+          <div class="col-md-1" style="height: 50px">
+            <img class="thumbnail" src="https://graph.facebook.com/737861445/picture"><br>
+          </div>
+          <div class="col-md-7">
+            <br>
+          <input type="text" value="<?=$user_profile['name']?>" readonly><br>
+          </div>
+        </div><br><br><br>
+
+        <br>
+        <table>
+        <?php
+          $forms = array(
+            array("姓名", "name", $user_profile['name'], "", ""),
+            array("學號", "sid", "", "b03705000", ""),
+            array("身分證字號", "rocid", "", "A123456789", ""),
+            array("聯絡電話", "phone", "", "0912345678", ""),
+            array("生日", "birthday", "", "1996/01/01", ""),
+            array("信箱", "email", "", "user@example.com", ""),
+            array("地址", "address", "", "臺北市羅斯福路四段一號", ""),
+            array("其他特殊事項", "special", "", "素食類別、特殊食物要求、提早離隊、個人疾病、其他狀況", ""),
+            array("緊急聯絡人及關係", "emergency", "", "劉冠宏 / 父子", ""),
+            array("緊急聯絡人電話", "emergencyphone", "", "0912345678", "")
+          );
+
+          foreach($forms as $item){
+            echo '<tr><td><label>';
+            echo $item[0];
+            echo '：</label><br><br></td><td><input size="60" name="';
+            echo $item[1];
+            echo '" value="';
+            echo $item[2];
+            echo '" placeholder="ex: ';
+            echo $item[3];
+            echo '"><br><br></td><td>&nbsp;&nbsp;</td><td class="text-muted">';
+            echo $item[4];
+            echo '<br><br></td></tr>';
+          }
+        ?>
+      </table>
+<?
+
+    include './lib/footer.php';
+
   }else{
 
     // Not logged in
@@ -439,6 +491,10 @@ $app->get('/logout', function() use ($app){
   session_destroy();
   $app->redirect('./');
 
+});
+
+$app->get('pay', function(){
+  echo 'hello';
 });
 
 $app->run();
