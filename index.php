@@ -389,7 +389,7 @@ foreach($deptData as $deptId => $deptDataPer){
 <?php
 });
 
-$app->get('/login', function(){
+$app->get('/login', function() use($app){
 
   $facebook = getFacebook();
   $user = $facebook->getUser();
@@ -398,17 +398,12 @@ $app->get('/login', function(){
 
     // Already logged in
 
-    $user_profile = $facebook->api('/me','GET');
-    print_r($user_profile);
+    $app->redirect('register');
 
   }else{
 
     // Redirect to login url
-    $loginurl = $facebook->getLoginUrl();
-    header("Location: $loginurl");
-    echo "<html><head>";
-    echo "<meta http-equiv=\"refresh\" content=\"0;url=$loginurl\" />";
-    echo '</head></html>';
+    $app->redirect($facebook->getLoginUrl());
 
   }
 
