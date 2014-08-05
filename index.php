@@ -1,6 +1,7 @@
 <?php
 require 'config.php';
 require 'vendor/autoload.php';
+require 'rb.php';
 
 $app = new \Slim\Slim();
 
@@ -9,12 +10,9 @@ function getFacebook(){
 	return $facebook;
 }
 
-function getDatabaseConnection() {
-  $dbh = new PDO(
-		"mysql:host=". DBHOST. ";dbname=". DBNAME. ";charset=utf8", DBUSER, DBPASS);
-  $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  return $dbh;
-}
+// Set up database connection
+
+R::setup('mysql:host='.DBHOST.';dbname='.DBNAME, DBUSER, DBPASS);
 
 $app->get('/', function(){
 ?>
