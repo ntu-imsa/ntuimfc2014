@@ -485,8 +485,43 @@ $app->get('/register', function(){
 
 $app->post('/register', function(){
 
-  //
+  $facebook = getFacebook();
+  $user = $facebook->getUser();
 
+  if($user){
+    $valid = true;
+    $required_parameters = array("name", "sid", "rocid", "phone", "birthday", "email", "address", "special", "emergency", "emergencyphone");
+    foreach($required_parameters as $para){
+      if(! (isset($_POST[$para]) && $_POST[$para] ) ){
+        $valid = false;
+        break;
+      }
+    }
+
+    $currentLink = './register';
+    include './lib/header.php';
+
+    if($valid){
+
+      $user_record = R::findOne( 'user', ' fbid = ? ', [ $user ]);
+      if(empty($user_record)){
+        $user_record = R::dispense( 'user' );
+        $user_record['fbid'] = $user;
+        foreach($required_parameters as $para){
+          $user_record[$para] = $_POST[$para];
+        }
+        R::store( $user_record );
+      }else{
+        echo '<h4>你已經報名過囉~</h4>';
+      }
+
+    }else{
+      echo '<br>請確認已經填寫所有欄位喲!<br><a href="./register">[重試]</a>';
+    }
+    include './lib/footer.php';
+  }else{
+    die('Forbidden');
+  }
 });
 
 $app->get('/logout', function() use ($app){
