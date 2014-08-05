@@ -421,5 +421,12 @@ $app->post('/register', function(){
 
 });
 
+$app->get('/logout', function() use ($app){
+
+  session_destroy();
+  $app->redirect('./');
+
+});
+
 $app->run();
 ?>
