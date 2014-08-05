@@ -48,7 +48,7 @@
 					<?php
 						$navbar = array(
 							array("./register", "報名"),
-							array("./pay", "匯款確認"),
+							array("./pay", "繳費"),
 							array("./notice", "注意事項")
 						);
 
