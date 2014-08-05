@@ -425,6 +425,7 @@ $app->get('/register', function(){
 
 ?>
         <br>
+        <form method="POST" action="register">
         <label>
         Facebook 帳號:</label>
         <div class="row-fluid">
@@ -468,6 +469,8 @@ $app->get('/register', function(){
           }
         ?>
       </table>
+      <button type="submit" class="btn btn-lg btn-primary">送出</button>
+      </form>
 <?
 
     include './lib/footer.php';
