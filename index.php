@@ -512,7 +512,7 @@ $app->post('/register', function(){
         }
         R::store( $user_record );
       }else{
-        echo '<h4>你已經報名過囉~</h4>';
+        echo '<br>你已經報名過囉~';
       }
 
     }else{
