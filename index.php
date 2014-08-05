@@ -418,11 +418,12 @@ $app->get('/register', function(){
   if($user){
 
     $user_profile = $facebook->api('/me','GET');
-    print_r($user_profile);
 
     $currentLink = './register';
     include './lib/header.php';
 
+    $user_record = R::findOne( 'user', ' fbid = ? ', [ $user ]);
+    if(empty($user_record)){
 ?>
         <br>
         <form method="POST" action="register">
@@ -472,7 +473,9 @@ $app->get('/register', function(){
       <button type="submit" class="btn btn-lg btn-primary">送出</button>
       </form>
 <?
-
+    }else{
+      echo '<br>報名成功~記得去繳費唷~';
+    }
     include './lib/footer.php';
 
   }else{
@@ -511,6 +514,7 @@ $app->post('/register', function(){
           $user_record[$para] = $_POST[$para];
         }
         R::store( $user_record );
+        echo '<br>報名成功!<br>請前往匯款資訊';
       }else{
         echo '<br>你已經報名過囉~';
       }
