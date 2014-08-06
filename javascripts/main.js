@@ -89,10 +89,11 @@
   loadMap = function() {
     var map, mapLatLng, mapOptions, marker;
 
-    mapLatLng = new google.maps.LatLng(25.017918, 121.537798);
+    mapLatLng = new google.maps.LatLng(24.9059493, 121.2681086);
     mapOptions = {
       center: mapLatLng,
-      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.HYBRID,
+      zoom: 16,
       scrollwheel: false
     };
     map = new google.maps.Map($mapCanva, mapOptions);
