@@ -360,6 +360,7 @@ foreach($deptData as $deptId => $deptDataPer){
         <footer id="footer">
           <div id="copyright">
             <div class="container">
+              Theme Designed by Students’ Information Technology Conference<br>
               &copy; 2014 Department of Information Management, National Taiwan University
             </div>
           </div>
