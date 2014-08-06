@@ -482,6 +482,13 @@ $app->get('/register', function(){
 
     // Not logged in
 
+    $currentLink = './register';
+    include './lib/header.php';
+
+    echo '<br><a href="login"><button class="btn btn-xl btn-primary">登入 Facebook 帳號報名</a>';
+
+    include './lib/footer.php';
+
   }
 
 });
