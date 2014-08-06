@@ -596,5 +596,41 @@ $app->get('/pay', function() use($app){
 
 });
 
+$app->post('/pay', function() use($app){
+
+  $facebook = getFacebook();
+  $user = $facebook->getUser();
+
+  if($user){
+
+    $currentLink = './pay';
+    include './lib/header.php';
+
+    $user_record = R::findOne( 'user', ' fbid = ? ', [ $user ]);
+
+    if(empty($user_record)){
+      echo '請先報名唷~';
+    }else{
+      $pay_record = R::findOne( 'pay', ' uid = ? ', [ $user_record['id'] ]);
+      if(empty($pay_record)){
+        $pay_record = R::dispense( 'pay' );
+        $pay_record['value'] = $_POST['value'];
+        $pay_record['uid'] = $user_record['id'];
+        R::store($pay_record);
+        echo '匯款資訊填寫成功~';
+      }else{
+        echo '你已經填寫過囉';
+      }
+    }
+
+    include './lib/footer.php';
+
+  }else{
+
+    $app->redirect('./register');
+
+  }
+});
+
 $app->run();
 ?>
