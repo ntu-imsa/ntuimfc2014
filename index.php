@@ -175,57 +175,57 @@ $app->get('/', function(){
                       </tr>
                       <tr>
                         <th class="session block">07:30</th>
-                        <td rowspan="2" class="session block"><h4>早餐</h4></td>
-                        <td rowspan="2" class="session block"><h4>早餐加菜</h4></td>
+                        <td class="session block"><h4>支援前線</h4></td>
+                        <td class="session block"><h4>團康遊戲</h4></td>
                       </tr>
                       <tr>
                         <th class="session block">08:30</th>
-                        <td rowspan="2" class="session block"><h4>在台大集合<br>前往營地</h4></td>
+                        <td class="session block"><h4>在台大集合</h4></td>
+                        <td colspan="2" class="session block"><h4>早餐</h4></td>
                       </tr>
                       <tr>
                         <th class="session block">09:00</th>
-                        <td rowspan="3" class="session block"><h4>王者之爭</h4></td>
-                        <td rowspan="3" class="session block"><h4>消失的杜蘭先生</h4><div class="detail">
-    <p>杜蘭先生消失惹</p> <p>名立嗎成現家了腳好，治我一才少獨戰一的要！片孩讓容化？家一場標西到得然相請工這一流內業善、燈入兩，也構樣以一源機些新是石成使種足讓良。見團經黃年著此再院現一這全任突？</p>
+                        <td class="session block"><h4>出發前往松旺農場</h4></td>
+                        <td rowspan="2" class="session block"><h4>策略遊戲</h4></td>
+                        <td rowspan="2" class="session block"><h4>水水</h4><div class="detail">
+                        <p>杜蘭先生消失惹</p> <p>名立嗎成現家了腳好，治我一才少獨戰一的要！片孩讓容化？家一場標西到得然相請工這一流內業善、燈入兩，也構樣以一源機些新是石成使種足讓良。見團經黃年著此再院現一這全任突？</p>
 
-  </div>
-</td>
+                        </div>
+                        </td>
+
+
                       </tr>
                       <tr>
                         <th class="session block">10:00</th>
-                        <td class="session block"><h4>測試實力之<br>轟炸島嶼</h4></td>
+                        <td class="session block"><h4>破冰遊戲 &amp; 前導片</h4></td>
                       </tr>
                       <tr>
                         <th class="session block">12:00</th>
-                        <td class="session block"><h4>盛宴的準備</h4></td>
-                      </tr>
-                      <tr>
-                        <th class="session block">13:30</th>
                         <td colspan="3" class="session block"><h4>午餐</h4></td>
                       </tr>
                       <tr>
+                        <th class="session block">13:30</th>
+                        <td colspan="3" class="session block"><h4>小隊時間</h4></td>
+                      </tr>
+                      <tr>
                         <th class="session block">14:30</th>
-                        <td class="session block"><h4>訓練中心</h4></td>
-                        <td class="session block"><h4>饑餓遊戲</h4></td>
-                        <td class="session block"><h4>Show Time!</h4></td>
+                        <td class="session block"><h4>大地遊戲</h4></td>
+                        <td class="session block"><h4>RPG</h4></td>
+                        <td class="session block"><h4>小隊呈現</h4></td>
                       </tr>
                       <tr>
                         <th class="session block">17:30</th>
-                        <td class="session block"><h4>晚餐</h4></td>
-                        <td rowspan="3" class="session block"><h4>燃燒的螢火</h4></td>
+                        <td colspan="2" class="session block"><h4>晚餐</h4></td>
                         <td class="session block"><h4>賦歸</h4></td>
                       </tr>
                       <tr>
                         <th class="session block">19:00</th>
-                        <td class="session block"><h4>盛宴嘉年華</h4></td>
-                      </tr>
-                      <tr>
-                        <th class="session block">19:00</th>
-                        <td class="session block"><h4>那棟大樓的秘密</h4></td>
+                        <td class="session block"><h4>夜教</h4></td>
+                        <td class="session block"><h4>營火</h4></td>
                       </tr>
                       <tr>
                         <th class="session block">22:00</th>
-                        <td colspan="2" class="session block"><h4>宵夜與小隊時間</h4></td>
+                        <td colspan="2" class="session block"><h4>宵夜 &amp; 小隊時間 &amp; 洗澡</h4></td>
                       </tr>
                     </tbody>
                   </table>
