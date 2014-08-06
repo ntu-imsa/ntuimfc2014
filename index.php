@@ -581,7 +581,7 @@ $app->get('/pay', function() use($app){
         </form>
 <?php
       }else{
-        echo $pay_record['value'];
+        echo '你填寫的資料：'.$pay_record['value'];
       }
     }
 
