@@ -468,8 +468,17 @@ $app->get('/register', function(){
             echo $item[4];
             echo '<br><br></td></tr>';
           }
+
+          $sizes = array('S', 'M', 'L', 'XL', '2L');
+          echo '<tr><td><label>營服尺寸：</label></td><td>';
+
+          foreach($sizes as $size){
+            echo '<label><input type="radio" name="size" value="'.$size.'"> '.$size.'</label> ';
+          }
+echo '</td><td></td><td></td></tr>'
         ?>
       </table>
+      <br>
       <button type="submit" class="btn btn-lg btn-primary">送出</button>
       </form>
 <?
@@ -500,7 +509,7 @@ $app->post('/register', function(){
 
   if($user){
     $valid = true;
-    $required_parameters = array("name", "sid", "rocid", "phone", "birthday", "email", "address", "special", "emergency", "emergencyphone");
+    $required_parameters = array("name", "sid", "rocid", "phone", "birthday", "email", "address", "special", "emergency", "emergencyphone", "size");
     foreach($required_parameters as $para){
       if(! (isset($_POST[$para]) && $_POST[$para] ) ){
         $valid = false;
