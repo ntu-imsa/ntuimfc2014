@@ -560,7 +560,13 @@ $app->get('/pay', function() use($app){
 
     $currentLink = './pay';
     include './lib/header.php';
-    
+    ?>
+    <br>
+    銀行：華南銀行 台大分行<br>
+    帳號：154-20-041128-5<br>
+    戶名：蕭友量<br><br>
+    繳費完成後請在以下填入匯款帳號後五碼等相關資訊<br>
+    <?php
     include './lib/footer.php';
 
   }else{
