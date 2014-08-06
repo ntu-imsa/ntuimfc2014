@@ -551,8 +551,24 @@ $app->get('/logout', function() use ($app){
 
 });
 
-$app->get('pay', function(){
-  echo 'hello';
+$app->get('/pay', function() use($app){
+
+  $facebook = getFacebook();
+  $user = $facebook->getUser();
+
+  if($user){
+
+    $currentLink = './pay';
+    include './lib/header.php';
+    
+    include './lib/footer.php';
+
+  }else{
+
+    $app->redirect('./register');
+
+  }
+
 });
 
 $app->run();
