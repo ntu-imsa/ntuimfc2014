@@ -294,29 +294,36 @@ $deptName=array('召部','隊輔','幹部群');
 $deptData=array();
 
 $deptData[] = array(
-  array('總召','陳劭恩','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
-  array('副召','涂靖雯','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
-  array('副召','賴冠廷','https://graph.facebook.com/100002315801969/picture?type=large&width=150&height=150')
+  array('第一小隊','殷豪','100001439017675'),
+  array('第一小隊','宋欣馨','100002554585595'),
+  array('第二小隊','郭毓棠','100001449413074'),
+  array('第二小隊','簡敏瑜','100000183112750'),
+  array('第三小隊','方松營','oliver.fang.5'),
+  array('第三小隊','周暄容','hsuanjung.chou'),
+  array('第四小隊','朱博遠','johnny.chu.568'),
+  array('第四小隊','趙涵秀','1798445851'),
+  array('第五小隊','？',''),
+  array('第五小隊','羅云伶','100002745828122')
 );
 
 $deptData[] = array(
-  array('總召','陳劭恩','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
-  array('副召','涂靖雯','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
-  array('副召','賴冠廷','https://graph.facebook.com/100002315801969/picture?type=large&width=150&height=150')
+  array('總召','陳劭恩','100000230048556'),
+  array('副召','涂靖雯','jingwen.tu'),
+  array('副召','賴冠廷','100002315801969')
 );
 
 $deptData[] = array(
-  array('活動部 部長','胡哲愷','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
-  array('活動部 副部長','梁暉義','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
-  array('庶務部 部長','李慶宏','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
-  array('庶務部 副部長','冷俊瑩','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
-  array('美宣部 部長','劉育婷','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
-  array('美宣部 副部長','陳君儒','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
-  array('公關部 部長','朱瑤章','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
-  array('公關部 副部長','楊大為','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150'),
-  array('器材部 部長','江孟軒','https://graph.facebook.com/100000230048556/picture?type=large&width=150&height=150'),
-  array('資訊部 部長','虞翔皓','https://graph.facebook.com/lolicon.fish/picture?type=large&width=150&height=150'),
-  array('資訊部 副部長','宋欣馨','https://graph.facebook.com/jingwen.tu/picture?type=large&width=150&height=150')
+  array('活動部 部長','胡哲愷','goxluix7'),
+  array('活動部 副部長','梁暉義','freddyddy'),
+  array('庶務部 部長','李慶宏','LeeChingHung'),
+  array('庶務部 副部長','冷俊瑩','100002026913237'),
+  array('美宣部 部長','劉育婷','100003664306521'),
+  array('美宣部 副部長','陳君儒','amy.chen.58511276'),
+  array('公關部 部長','朱瑤章','100000165533409'),
+  array('公關部 副部長','楊大為','100000178258887'),
+  array('器材部 部長','江孟軒','100000340782660'),
+  array('資訊部 部長','虞翔皓','lolicon.fish'),
+  array('資訊部 副部長','宋欣馨','100002554585595')
 );
 
 foreach($deptData as $deptId => $deptDataPer){
@@ -330,7 +337,7 @@ foreach($deptData as $deptId => $deptDataPer){
 ?>
       <aside class="member">
         <div class="avatar">
-          <a class="link" target="_blank"><img alt="<?php echo $staffData[1]; ?>" class="round" src="<?php echo $staffData[2]; ?>" /></a>
+          <a class="link" target="_blank"><img alt="<?php echo $staffData[1]; ?>" class="round" src="https://graph.facebook.com/<?php echo $staffData[2]; ?>/picture?type=large&width=150&height=150" /></a>
         </div>
         <h4 class="nickname">
           <?php echo $staffData[1]; ?>
