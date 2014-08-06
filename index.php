@@ -581,7 +581,12 @@ $app->get('/pay', function() use($app){
         </form>
 <?php
       }else{
-        echo '你填寫的資料：'.$pay_record['value'];
+        echo '你填寫的資料：'.$pay_record['value'].'<br>狀態：';
+        if($pay_record['status'] == 0){
+          echo '待確認';
+        }else{
+          echo '已確認';
+        }
       }
     }
 
@@ -616,6 +621,7 @@ $app->post('/pay', function() use($app){
         $pay_record = R::dispense( 'pay' );
         $pay_record['value'] = $_POST['value'];
         $pay_record['uid'] = $user_record['id'];
+        $pay_record['status'] = 0;
         R::store($pay_record);
         echo '匯款資訊填寫成功~';
       }else{
