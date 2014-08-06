@@ -240,42 +240,40 @@ $app->get('/', function(){
   <div class="sponsors">
     <div class="container">
 
-      <aside class="sponsor">
-        <div class="logo">
-          <a href="#" target="_blank"><img src="images/sponsors/archilife.png" /></a>
-        </div>
-        <h3>
-          Paul Gomez Hopkins
-          <span class="sub-header">險制寶一南子邊在關</span>
-        </h3>
-      </aside>
+<?php
+  $sponsors = array(
+    array("台大湘園牛肉麵", "和平東路118巷40號", ""),
+    array("姜柏任 學長","",""),
+    array("強生汽車","復興南路二段328號","(02)27330389"),
+    array("芝鄉涼麵","台北市和平東路二段311巷26號","(02)27003080"),
+    array("LaWhale阿威麵包店","台北市復興南路二段193巷3號","(02)23252218"),
+    array("阿里媽媽南洋料理","羅斯福路四段136巷1衖3號",""),
+    array("一吃獨秀綠色臭豆腐˙米粉羹","羅斯福路四段136巷1弄11號1樓","(02)83692905"),
+    array("綠園水果","和平東路118巷54弄1號",""),
+    array("甜品屋","和平東路118巷61號","(02)87327622"),
+    array("復興車行","復興南路2段360號","(02)27375741"),
+    array("191自轉車","復興南路2段391號","(02)27359790"),
+    array("阿玉水餃","辛亥路2段217號","(02)27365875"),
+    array("香港金葉港式燒臘","和平東路二段311巷28號",""),
+    array("巧房餡餅蔥燒餅","台北市和平東路二段313號(應該也是311巷)","(02)27008901"),
+    array("凱利義式餐廳","羅斯福路四段136巷6衖8號",""),
+    array("藍家割包四神湯","羅斯福路三段316巷8弄3號","(02)23682060"),
+    array("公館邁阿密","羅斯福路三段316巷9弄4號","(02)23657413"),
+    array("環捷資訊有限公司","忠孝東路二段121巷20號",""),
+    array("越南牛肉河粉","台北市和平東路二段311巷23號","(02)27055383"),
+    array("白帝城川式滷味","羅斯福路四段136巷8號","")
+  );
 
-      <aside class="sponsor">
-        <div class="logo">
-          <a href="#" target="_blank"><img src="images/sponsors/kktix.png" /></a>
-        </div>
-        <h3>
-          發源祥
-          <span class="sub-header">產生收一土他</span>
-        </h3>
-      </aside>
+  foreach($sponsors as $sponsor){
+    echo '<aside class="sponsor"><h3>';
+    echo $sponsor[0];
+    echo '<span class="sub-header">';
+    echo $sponsor[1];
+    echo '<br>'.$sponsor[2];
+    echo '</span></h3></aside>';
+  }
+?>
 
-      <aside class="sponsor">
-        <div class="logo">
-          <a href="#" target="_blank"><img src="images/sponsors/justfont.png" /></a>
-        </div>
-        <h3>
-          Curry 義優順
-          <span class="sub-header">腦心們中色錢基談預部帶車叫</span>
-        </h3>
-      </aside>
-
-    </div>
-    <div class="container">
-      <div class="inline list">
-        <h3 class="inline header">特別感謝</h3>
-        <span class="inline sponsor">宏浩光和有限公司</span>
-      </div>
     </div>
   </div>
 </div>
