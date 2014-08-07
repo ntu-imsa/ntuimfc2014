@@ -437,7 +437,7 @@ $app->get('/register', function(){
         Facebook 帳號:</label>
         <div class="row-fluid">
           <div class="col-md-1" style="height: 50px">
-            <img class="thumbnail" src="https://graph.facebook.com/737861445/picture"><br>
+            <img class="thumbnail" src="https://graph.facebook.com/<?=$user?>/picture"><br>
           </div>
           <div class="col-md-7">
             <br>
