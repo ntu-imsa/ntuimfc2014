@@ -306,7 +306,7 @@ $deptData[] = array(
   array('第二小隊','郭毓棠','100001449413074'),
   array('第二小隊','簡敏瑜','100000183112750'),
   array('第三小隊','方松營','oliver.fang.5'),
-  array('第三小隊','周暄容','hsuanjung.chou'),
+  array('第三小隊','周暄瑢','hsuanjung.chou'),
   array('第四小隊','朱博遠','johnny.chu.568'),
   array('第四小隊','趙涵秀','1798445851'),
   array('第五小隊','？',''),
