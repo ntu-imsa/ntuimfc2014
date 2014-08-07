@@ -647,5 +647,37 @@ $app->post('/pay', function() use($app){
   }
 });
 
+$app->get('/notice', function() use($app) {
+
+	$facebook = getFacebook();
+	$user = $facebook->getUser();
+
+	if($user){
+		$currentLink = './notice';
+		include './lib/header.php';
+		?>
+		<br>
+		<h4>記得攜帶用品與注意事項：</h4>
+		<ul>
+			<li>換洗衣服（需多準備一套玩水球用深色衣服，不會下水），營期時會發營服一件。</li>
+			<li>個人藥品、盥洗用具、環保餐具、水壺、健保卡、零錢</li>
+			<li>防曬用品、防蚊液、輕便雨衣雨具</li>
+			<li>一百元左右小禮物一件</li>
+			<li>請於營期第一天將「家長同意書」及繳費收據交給學長姐喔~</li>
+		</ul>
+		<br>
+		如果有任何問題歡迎打電話聯絡我們~<br><br>
+		總召：陳劭恩 0932-322-975<br>
+		副召：涂靖雯 0988-607-667<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;賴冠廷 0920-347-478
+		<?php
+		include './lib/footer.php';
+	}else{
+		$app->redirect('./register');
+	}
+
+
+});
+
 $app->run();
 ?>
