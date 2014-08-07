@@ -480,12 +480,15 @@ $app->get('/register', function(){
           foreach($sizes as $size){
             echo '<label><input type="radio" name="size" value="'.$size.'"> '.$size.'</label> ';
           }
-echo '</td><td></td><td></td></tr>'
+echo '</td><td></td><td class="text-muted"><a target="_blank" class="btn" href="./images/csize.jpg">尺寸參考表</a></td></tr>'
         ?>
       </table>
       <br>
       <button type="submit" class="btn btn-lg btn-primary">送出</button>
       </form>
+
+			<div class="modal fade" id="csize" tabindex="-1" role="dialog" aria-hidden="true">
+</div>
 <?
     }else{
       echo '<br>報名成功~記得去繳費唷~';
