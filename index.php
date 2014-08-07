@@ -180,7 +180,7 @@ $app->get('/', function(){
                       </tr>
                       <tr>
                         <th class="session block">08:30</th>
-                        <td class="session block"><h4>在台大集合</h4></td>
+                        <td class="session block"><h4>在台大校門口集合</h4></td>
                         <td colspan="2" class="session block"><h4>早餐</h4></td>
                       </tr>
                       <tr>
@@ -221,7 +221,7 @@ $app->get('/', function(){
                       <tr>
                         <th class="session block">19:00</th>
                         <td class="session block"><h4>夜教</h4></td>
-                        <td class="session block"><h4>營火</h4></td>
+                        <td class="session block"><h4>晚會</h4></td>
                       </tr>
                       <tr>
                         <th class="session block">22:00</th>
