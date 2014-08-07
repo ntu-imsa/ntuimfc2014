@@ -37,13 +37,13 @@ $app->get('/', function(){
         <meta property="og:title" content="<?php echo ACTITLE; ?>">
         <meta property="og:type" content="website">
         <meta property="og:url" content="index.html">
-        <meta property="og:image" content="icon-2014-special.jpg">
+<!--        <meta property="og:image" content="icon-2014-special.jpg"> -->
         <meta property="og:site_name" content="<?php echo ACTITLE; ?>">
         <meta property="og:description" content="<?php echo DESCRIPTION; ?>">
 
         <meta property="twitter:title" content="<?php echo ACTITLE; ?>">
         <meta property="twitter:description" content="<?php echo DESCRIPTION; ?>">
-        <meta property="twitter:image:src" content="icon-2014-special.jpg">
+<!--        <meta property="twitter:image:src" content="icon-2014-special.jpg"> -->
         <meta property="twitter:image:width" content="256">
         <meta property="twitter:image:height" content="256">
 
@@ -341,7 +341,7 @@ foreach($deptData as $deptId => $deptDataPer){
         </div>
         <h4 class="nickname">
           <?php echo $staffData[1]; ?>
-          <span class="sub-header title"><?php echo $staffData[0]; ?></span>
+          <span class="sub-header title"><?php if($deptName[$deptId] != '隊輔'){echo $staffData[0];} ?></span>
         </h4>
       </aside>
 <?php
