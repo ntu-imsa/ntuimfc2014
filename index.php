@@ -175,7 +175,7 @@ $app->get('/', function(){
                       </tr>
                       <tr>
                         <th class="session block">07:30</th>
-                        <td class="session block"><h4>支援前線</h4></td>
+                        <td class="session block"><h4>團康遊戲</h4></td>
                         <td class="session block"><h4>團康遊戲</h4></td>
                       </tr>
                       <tr>
