@@ -37,13 +37,13 @@ $app->get('/', function(){
         <meta property="og:title" content="<?php echo ACTITLE; ?>">
         <meta property="og:type" content="website">
         <meta property="og:url" content="http://union.im.ntu.edu.tw/freshman/">
-        <meta property="og:image" content="images/kuma_2.jpg">
+        <meta property="og:image" content="http://union.im.ntu.edu.tw/freshman/images/kuma_2.jpg">
         <meta property="og:site_name" content="<?php echo ACTITLE; ?>">
         <meta property="og:description" content="<?php echo DESCRIPTION; ?>">
 
         <meta property="twitter:title" content="<?php echo ACTITLE; ?>">
         <meta property="twitter:description" content="<?php echo DESCRIPTION; ?>">
-        <meta property="twitter:image:src" content="images/kuma_2.jpg">
+        <meta property="twitter:image:src" content="http://union.im.ntu.edu.tw/freshman/images/kuma_2.jpg">
         <meta property="twitter:image:width" content="256">
         <meta property="twitter:image:height" content="256">
 
