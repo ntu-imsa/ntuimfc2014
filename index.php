@@ -197,7 +197,7 @@ $app->get('/', function(){
                       </tr>
                       <tr>
                         <th class="session block">10:00</th>
-                        <td class="session block"><h4>破冰遊戲 &amp; 前導片</h4></td>
+                        <td class="session block"><h4>哩咧演啥毀？？</h4></td>
                       </tr>
                       <tr>
                         <th class="session block">12:00</th>
