@@ -28,8 +28,8 @@ $app->get('/', function(){
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>台大資管迎新宿營 | Freshman Camp for NTUIM</title>
 <?php
-  define("ACTITLE","台大資管迎新宿營");
-  define("DESCRIPTION", "所以想要參加宿營，想要提早認識大家，想要認識更多學長姐的不要再猶豫，快去報名吧！");
+  define("ACTITLE","2014 台大資管迎新宿營");
+  define("DESCRIPTION", "恭喜各位進入資管系這個⼤家庭!!想要提早認識大家，想要認識更多學長姐嗎？快來參加為你們精心準備的迎新宿營吧！");
 ?>
         <meta name="description" content="<?php echo DESCRIPTION; ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
