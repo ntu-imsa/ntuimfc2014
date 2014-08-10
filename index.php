@@ -186,8 +186,8 @@ $app->get('/', function(){
                       <tr>
                         <th class="session block">09:00</th>
                         <td class="session block"><h4>出發前往松旺農場</h4></td>
-                        <td rowspan="2" class="session block"><h4>策略遊戲</h4></td>
-                        <td rowspan="2" class="session block"><h4>水水</h4><div class="detail">
+                        <td rowspan="2" class="session block"><h4>IM AMBITION</h4></td>
+                        <td rowspan="2" class="session block"><h4>水球！</h4><div class="detail">
                         <p>杜蘭先生消失惹</p> <p>名立嗎成現家了腳好，治我一才少獨戰一的要！片孩讓容化？家一場標西到得然相請工這一流內業善、燈入兩，也構樣以一源機些新是石成使種足讓良。見團經黃年著此再院現一這全任突？</p>
 
                         </div>
@@ -209,8 +209,8 @@ $app->get('/', function(){
                       </tr>
                       <tr>
                         <th class="session block">14:30</th>
-                        <td class="session block"><h4>大地遊戲</h4></td>
-                        <td class="session block"><h4>RPG</h4></td>
+                        <td class="session block"><h4>來自火星的聖選</h4></td>
+                        <td class="session block"><h4>推理要在午餐後</h4></td>
                         <td class="session block"><h4>小隊呈現</h4></td>
                       </tr>
                       <tr>
