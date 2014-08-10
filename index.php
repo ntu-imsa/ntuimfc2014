@@ -157,8 +157,8 @@ $app->get('/', function(){
       <div class="information">
         <span class="date">2014 年 9 月 1 日 ~ 9 月 3 日 /</span><span class="location"> 松旺農場</span>
       </div>
-      <div class="sitcon-jiang">
-        <img id="sitcon-jiang-at-map" src="images/sitcon_at_map.png" width="177" height="463" alt="SITCON 醬 Q 版" />
+      <div class="kuma">
+        <img id="kuma-at-map" src="images/kuma_1.png" width="405" height="461" alt="KumaKuma" />
       </div>
     </div>
   </div>

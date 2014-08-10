@@ -665,19 +665,19 @@ html {
 	}
 }
 
-#location-information .sitcon-jiang {
+#location-information .kuma {
 	position: relative
 }
 
 @media (min-width: 64em) {
-	#location-information .sitcon-jiang {
+	#location-information .kuma {
 		width: 32.20339%;
 		float: right;
 		margin-right: 0
 	}
 }
 
-#location-information .sitcon-jiang img {
+#location-information .kuma img {
 	display: none;
 	position: absolute;
 	top: -320px;
@@ -685,7 +685,7 @@ html {
 }
 
 @media (min-width: 64em) {
-	#location-information .sitcon-jiang img {
+	#location-information .kuma img {
 		display: block
 	}
 }

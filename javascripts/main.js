@@ -214,15 +214,15 @@
   });
 
   page.section(SECTIONS.LOCATION, function(section) {
-    var sitconJiangAtMap, transitions;
+    var kumaAtMap, transitions;
 
     transitions = [];
-    sitconJiangAtMap = document.querySelector("#sitcon-jiang-at-map");
+    kumaAtMap = document.querySelector("#kuma-at-map");
     section.on("scrollIn", function() {
       return setMenuActiveItem(1);
     });
     transitions.push({
-      target: sitconJiangAtMap,
+      target: kumaAtMap,
       start: 0,
       end: 100,
       key: 'transform',
@@ -268,6 +268,17 @@
   $window.ready(function() {
     page.init();
     loadMap();
+    kumaChange(1);
   });
 
 }).call(this);
+
+function kumaChange(num){
+  document.getElementById("kuma-at-map").src = 'images/kuma_'+num+'.png';
+  if(num == 1){
+    num = 2;
+  }else{
+    num = 1;
+  }
+  setTimeout("kumaChange('"+num+"')", 500);
+}
