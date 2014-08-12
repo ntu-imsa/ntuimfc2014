@@ -587,7 +587,7 @@ $app->get('/pay', function() use($app){
     銀行：華南銀行 台大分行<br>
     帳號：154-20-041128-5<br>
     戶名：蕭友量<br><br>
-    繳費完成後請在以下填入匯款帳號後五碼等相關資訊<br><br>
+    繳費完成後請在以下填入匯款相關資訊<br><br>
 <?php
 
     $user_record = R::findOne( 'user', ' fbid = ? ', [ $user ]);
@@ -599,7 +599,20 @@ $app->get('/pay', function() use($app){
       if(empty($pay_record)){
 ?>
         <form method="POST">
-          <label>匯款後五碼：</label><input name="value"> <button class="btn btn-primary" type="submit">送出</button>
+					<table>
+						<?php
+							$forms = array(
+								array("匯款銀行", "bank"),
+								array("匯款戶名", "name"),
+								array("帳號後五碼", "value"),
+								array("其他", "other")
+							);
+							foreach($forms as $item){
+								echo '<tr><td><label>'.$item[0].'：<br><br></label></td><td><input name="'.$item[1].'"><br><br></td></tr>';
+							}
+						?>
+					</table>
+						<br><button class="btn btn-primary" type="submit">送出</button>
         </form>
 <?php
       }else{
@@ -640,9 +653,12 @@ $app->post('/pay', function() use($app){
     }else{
       $pay_record = R::findOne( 'pay', ' uid = ? ', [ $user_record['id'] ]);
       if(empty($pay_record)){
+				$required_parameters = array('bank', 'name', 'value', 'other');
         $pay_record = R::dispense( 'pay' );
-        $pay_record['value'] = $_POST['value'];
         $pay_record['uid'] = $user_record['id'];
+				foreach($required_parameters as $para){
+					$pay_record[$para] = $_POST[$para];
+				}
         $pay_record['status'] = 0;
         R::store($pay_record);
         echo '匯款資訊填寫成功~';
