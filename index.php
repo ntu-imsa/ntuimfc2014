@@ -438,7 +438,7 @@ $app->get('/login(/admin/:admin)', function($admin = 0) use($app){
     // Already logged in
 
 		if($admin){
-			$app->redirect('list_all');
+			$app->redirect('../../list_all');
 		}else{
     	$app->redirect('register');
 		}
