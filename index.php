@@ -756,7 +756,7 @@ $app->get('/list_all', function() use($app) {
 				$senior_record = R::getRow('SELECT * FROM `senior` WHERE fbid = ?', [ $fbid_real ]);
 				if(!empty($senior_record)){
 					$list_all = R::getAll('SELECT * FROM `freshman`');
-					echo '<table class="table table-bordered no-wrap"><tr><th>學號</th><th>姓名</th><th>已報名</th></tr>';
+					echo '<br><table class="table table-bordered no-wrap"><tr><th>學號</th><th>姓名</th><th>已報名</th></tr>';
 					foreach($list_all as $row){
 						echo '<tr><td>'.$row['sid'].'</td><td>'.$row['name'].'</td><td>';
 						$reg_data = R::findOne('user', ' sid = ? ', [ $row['sid'] ]);
