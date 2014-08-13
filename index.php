@@ -747,29 +747,47 @@ $app->get('/list_all', function() use($app) {
 
 	if($user){
 
-		// Check if is senior
+		$senior_record = R::getRow('SELECT * FROM `senior` WHERE fbid_scoped = ? ', [ $user ]);
+		$qualified = 0;
 
-		$picture_data = $facebook->api('/me/picture?redirect=false','GET');
-		$fbid_real = -1;
+		if(empty($senior_record)){
 
-		if(!$picture_data['data']['is_silhouette']){
-			$fbid_real = getRealIdByPhoto($picture_data['data']['url']);
-			if($fbid_real != -1){
-				$senior_record = R::getRow('SELECT * FROM `senior` WHERE fbid = ?', [ $fbid_real ]);
-				if(!empty($senior_record)){
-					$list_all = R::getAll('SELECT * FROM `freshman`');
-					echo '<br><table class="table table-bordered no-wrap"><tr><th>學號</th><th>姓名</th><th>已報名</th></tr>';
-					foreach($list_all as $row){
-						echo '<tr><td>'.$row['sid'].'</td><td>'.$row['name'].'</td><td>';
-						$reg_data = R::findOne('user', ' sid = ? ', [ $row['sid'] ]);
-						if(!empty($reg_data)){
-							echo '是';
+			// Check if is senior
+			$picture_data = $facebook->api('/me/picture?redirect=false','GET');
+			$fbid_real = -1;
+
+			if(!$picture_data['data']['is_silhouette']){
+				$fbid_real = getRealIdByPhoto($picture_data['data']['url']);
+				if($fbid_real > 0){
+					$senior_record = R::getRow('SELECT * FROM `senior` WHERE `fbid` = ? ', [ $fbid_real ]);
+					if(!empty($senior_record)){
+						$qualified = 1;
+					}else{
+						$user_profile = $facebook->api('/me','GET');
+						$senior_record = R::getRow('SELECT * FROM `senior` WHERE `name` = ? ', [ $user_profile['name'] ]);
+						$row_picture_data = json_decode(file_get_contents('http://graph.facebook.com/'.$senior_record['fbid'].'/picture?redirect=0'));
+						$row_fbid_real = getRealIdByPhoto($row_picture_data['data']['url']);
+						if($fbid_real == $row_fbid_real){
+							R::exec('UPDATE `senior` SET `fbid` = ? WHERE `fbid` = ?', [ $row_fbid_real, $fbid_real ]);
+							$qualified = 1;
 						}
-						echo '</td></tr>';
 					}
-					echo '</table>';
 				}
 			}
+		}
+
+		if($qualified == 1){
+			$list_all = R::getAll('SELECT * FROM `freshman`');
+			echo '<br><table class="table table-bordered no-wrap"><tr><th>學號</th><th>姓名</th><th>已報名</th></tr>';
+			foreach($list_all as $row){
+				echo '<tr><td>'.$row['sid'].'</td><td>'.$row['name'].'</td><td>';
+				$reg_data = R::findOne('user', ' sid = ? ', [ $row['sid'] ]);
+				if(!empty($reg_data)){
+					echo '是';
+				}
+				echo '</td></tr>';
+			}
+			echo '</table>';
 		}
 	}else{
 		// Not logged in
