@@ -428,7 +428,7 @@ foreach($deptData as $deptId => $deptDataPer){
 <?php
 });
 
-$app->get('/login(/admin/:admin)', function($admin = 0) use($app){
+$app->get('/login)', function() use($app){
 
   $facebook = getFacebook();
   $user = $facebook->getUser();
@@ -437,8 +437,8 @@ $app->get('/login(/admin/:admin)', function($admin = 0) use($app){
 
     // Already logged in
 
-		if($admin){
-			$app->redirect('../../list_all');
+		if(isset($_SESSION['admin'])){
+			$app->redirect('list_all');
 		}else{
     	$app->redirect('register');
 		}
@@ -739,6 +739,8 @@ $app->get('/list_all', function() use($app) {
 	$facebook = getFacebook();
 	$user = $facebook->getUser();
 
+	$_SESSION['admin'] = 1;
+
 	$adminInterface = true;
 	$currentLink = './list_all';
 	include './lib/header.php';
@@ -772,7 +774,7 @@ $app->get('/list_all', function() use($app) {
 	}else{
 		// Not logged in
 
-		echo '<br><a href="login/admin/1" class="btn btn-xl btn-primary">登入 Facebook 帳號</a>';
+		echo '<br><a href="login" class="btn btn-xl btn-primary">登入 Facebook 帳號</a>';
 
 	}
 
