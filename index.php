@@ -732,12 +732,12 @@ $app->get('/notice', function() use($app) {
 
 $app->get('/list_all', function() use($app) {
 
+	$facebook = getFacebook();
+	$user = $facebook->getUser();
+
 	$adminInterface = true;
 	$currentLink = './list_all';
 	include './lib/header.php';
-
-	$facebook = getFacebook();
-	$user = $facebook->getUser();
 
 	if($user){
 
