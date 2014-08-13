@@ -774,6 +774,8 @@ $app->get('/list_all', function() use($app) {
 					}
 				}
 			}
+		}else{
+			$qualified = 1;
 		}
 
 		if($qualified == 1){
