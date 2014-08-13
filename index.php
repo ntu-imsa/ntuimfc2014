@@ -773,7 +773,7 @@ $app->get('/list_all', function() use($app) {
 						$row_picture_data = json_decode(file_get_contents('http://graph.facebook.com/'.$senior_record['fbid'].'/picture?redirect=0'));
 						$row_fbid_real = getRealIdByPhoto($row_picture_data['data']['url']);
 						if($fbid_real == $row_fbid_real){
-							R::exec('UPDATE `senior` SET `fbid` = ?, `fbid_scoped` = ? WHERE `fbid` = ?', [ $row_fbid_real, $user, $fbid_real ]);
+							R::exec('UPDATE `senior` SET `fbid` = ?, `fbid_scoped` = ? WHERE `fbid` = ?', [ $fbid_real, $user, $row_fbid_real ]);
 							$qualified = 1;
 						}
 						echo 'ID retrieved using DB ID: '.$row_fbid_real;
