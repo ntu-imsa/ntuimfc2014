@@ -437,25 +437,6 @@ $app->get('/login', function() use($app){
 
     // Already logged in
 
-		// Check if is senior
-
-		$senior_record = R::findOne('senior', ' fbid_scoped = ?  ', [ $user ]);
-		if(empty($senior_record)){
-			$picture_data = $facebook->api('/me/picture?redirect=false','GET');
-			$fbid_real = -1;
-			if(!$picture_data['data']['is_silhouette']){
-				$fbid_real = getRealIdByPhoto($picture_data['data']['url']);
-				if($fbid_real != -1){
-					$senior_record = R::findOne('senior', ' fbid = ? ', [ $fbid_real ]);
-					if(!empty($senior_record)){
-						R::exec('UPDATE `senior` SET `fbid_scoped` = ? WHERE `fbid` = ?', [$user, $fbid_real]);
-						$app->redirect('list_all');
-
-					}
-				}
-			}
-		}
-
     $app->redirect('register');
 
   }else{
