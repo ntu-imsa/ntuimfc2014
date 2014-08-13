@@ -750,41 +750,12 @@ $app->get('/list_all', function() use($app) {
 		$senior_record = R::getRow('SELECT * FROM `senior` WHERE fbid_scoped = ? ', [ $user ]);
 		$qualified = 0;
 
-		echo '<br><br>DEBUG INFO:<br>';
-		echo 'Scoped ID: '.$user.'<br>';
-
 		if(empty($senior_record)){
 
-			// Check if is senior
-			$picture_data = $facebook->api('/me/picture?redirect=false','GET');
-			$fbid_real = -1;
+			echo 'Scoped ID: '.$user.'<br>';
 
-			if(!$picture_data['data']['is_silhouette']){
-				$fbid_real = getRealIdByPhoto($picture_data['data']['url']);
-				if($fbid_real > 0){
-					echo 'UID: '.$fbid_real.'<br>';
-					$senior_record = R::getRow('SELECT * FROM `senior` WHERE `fbid` = ? ', [ $fbid_real ]);
-					if(!empty($senior_record)){
-						$qualified = 1;
-					}else{
-						$user_profile = $facebook->api('/me','GET');
-						$senior_record = R::getRow('SELECT * FROM `senior` WHERE `name` = ? ', [ $user_profile['name'] ]);
-						echo 'ID in DB before: '.$senior_record['fbid'].'<br>';
-						$row_picture_data = json_decode(file_get_contents('http://graph.facebook.com/'.$senior_record['fbid'].'/picture?redirect=0'));
-						$row_fbid_real = getRealIdByPhoto($row_picture_data['data']['url']);
-						if($fbid_real == $row_fbid_real){
-							R::exec('UPDATE `senior` SET `fbid` = ?, `fbid_scoped` = ? WHERE `fbid` = ?', [ $fbid_real, $user, $senior_record['fbid'] ]);
-							$qualified = 1;
-						}
-						echo 'ID retrieved using DB ID: '.$row_fbid_real;
-					}
-				}
-			}
 		}else{
-			$qualified = 1;
-		}
 
-		if($qualified == 1){
 			$list_all = R::getAll('SELECT * FROM `freshman`');
 			echo '<br><table class="table table-bordered no-wrap"><tr><th>學號</th><th>姓名</th><th>已報名</th></tr>';
 			foreach($list_all as $row){
