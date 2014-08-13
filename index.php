@@ -448,10 +448,7 @@ $app->get('/login', function() use($app){
 				if($fbid_real != -1){
 					$senior_record = R::findOne('senior', ' fbid = ? ', [ $fbid_real ]);
 					if(!empty($senior_record)){
-						$senior_record = R::load('senior', $senior_record['id']);
-						$senior_record['fbid_scoped'] = $user;
-						R::store($senior_record);
-
+						R::exec('UPDATE `senior` SET `fbid_scoped` = ? WHERE `fbid` = ?', [$user, $fbid_real]);
 						$app->redirect('list_all');
 
 					}
