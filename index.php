@@ -737,6 +737,8 @@ $app->get('/list_all', function() use($app) {
 	include './lib/header.php';
 
 	$facebook = getFacebook();
+	$user = $facebook->getUser();
+
 	if($user){
 
 		$senior_record = R::findOne('senior', ' fbid_scoped = ?  ', [ $user ]);
