@@ -428,7 +428,7 @@ foreach($deptData as $deptId => $deptDataPer){
 <?php
 });
 
-$app->get('/login', function() use($app){
+$app->get('/login(/admin/:admin)', function($admin = 0) use($app){
 
   $facebook = getFacebook();
   $user = $facebook->getUser();
@@ -437,7 +437,11 @@ $app->get('/login', function() use($app){
 
     // Already logged in
 
-    $app->redirect('register');
+		if($admin){
+			$app->redirect('list_all');
+		}else{
+    	$app->redirect('register');
+		}
 
   }else{
 
@@ -741,28 +745,33 @@ $app->get('/list_all', function() use($app) {
 
 	if($user){
 
-		$senior_record = R::findOne('senior', ' fbid_scoped = ?  ', [ $user ]);
-		if(!empty($senior_record)){
+		// Check if is senior
 
-			$list_all = R::getAll('SELECT * FROM `freshman`');
-			echo '<table class="table table-bordered no-wrap"><tr><th>學號</th><th>姓名</th><th>已報名</th></tr>';
-			foreach($list_all as $row){
-				echo '<tr><td>'.$row['sid'].'</td><td>'.$row['name'].'</td><td>';
-				$reg_data = R::findOne('user', ' sid = ? ', [ $row['sid'] ]);
-				if(!empty($reg_data)){
-					echo '是';
+		$picture_data = $facebook->api('/me/picture?redirect=false','GET');
+		$fbid_real = -1;
+
+		if(!$picture_data['data']['is_silhouette']){
+			$fbid_real = getRealIdByPhoto($picture_data['data']['url']);
+			if($fbid_real != -1){
+				$senior_record = R::getRow('SELECT * FROM `senior` WHERE fbid = ?', [ $fbid_real ]);
+				if(!empty($senior_record)){
+					$list_all = R::getAll('SELECT * FROM `freshman`');
+					echo '<table class="table table-bordered no-wrap"><tr><th>學號</th><th>姓名</th><th>已報名</th></tr>';
+					foreach($list_all as $row){
+						echo '<tr><td>'.$row['sid'].'</td><td>'.$row['name'].'</td><td>';
+						$reg_data = R::findOne('user', ' sid = ? ', [ $row['sid'] ]);
+						if(!empty($reg_data)){
+							echo '是';
+						}
+						echo '</td></tr>';
+					}
 				}
-				echo '</td></tr>';
 			}
-
-		}else{
-			echo 'Forbidden';
 		}
-
 	}else{
 		// Not logged in
 
-		echo '<br><a href="login" class="btn btn-xl btn-primary">登入 Facebook 帳號</a>';
+		echo '<br><a href="login/admin/1" class="btn btn-xl btn-primary">登入 Facebook 帳號</a>';
 
 	}
 
