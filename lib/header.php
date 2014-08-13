@@ -56,8 +56,8 @@
 							$navbar = array(
 								array("./list_all", "新生列表"),
 								array("./list_register", "報名名單")
-							)
-						};
+							);
+						}
 
 						foreach($navbar as $link){
 							echo '<li';
