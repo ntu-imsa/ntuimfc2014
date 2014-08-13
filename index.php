@@ -765,6 +765,7 @@ $app->get('/list_all', function() use($app) {
 						}
 						echo '</td></tr>';
 					}
+					echo '</table>';
 				}
 			}
 		}
