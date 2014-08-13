@@ -782,5 +782,23 @@ $app->get('/list_all', function() use($app) {
 
 });
 
+$app->get('/list_register', function() use($app) {
+	$facebook = getFacebook();
+	$user = $facebook->getUser();
+
+	$_SESSION['admin'] = 1;
+
+	if($user){
+		$adminInterface = true;
+		$currentLink = './list_register';
+		include './lib/header.php';
+		echo '這邊還沒寫好，請看新生名單謝謝 XD';
+		include './lib/footer.php';
+	}else{
+		$app->redirect('login');
+	}
+
+});
+
 $app->run();
 ?>
