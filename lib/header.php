@@ -52,6 +52,13 @@
 							array("./notice", "注意事項")
 						);
 
+						if(isset($adminInterface)){
+							$navbar = array(
+								array("./list_all", "新生列表"),
+								array("./list_register", "報名名單")
+							)
+						};
+
 						foreach($navbar as $link){
 							echo '<li';
 							if($link[0] == $currentLink){

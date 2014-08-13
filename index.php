@@ -11,6 +11,25 @@ function getFacebook(){
 	return $facebook;
 }
 
+function getRealIdByPhoto($url){
+	$photo_data = explode("_", $url);
+
+	$context = stream_context_create(
+			array(
+					'http' => array(
+							'follow_location' => false
+					)
+			)
+	);
+	$html = file_get_contents('https://www.facebook.com/'.$photo_data[1], false, $context);
+	if (strpos($http_response_header['1'],'photo.php') !== false) {
+			$tmp = explode('.', $http_response_header['1']);
+			return explode('&', $tmp[6])[0];
+	}else{
+		return 0;
+	}
+}
+
 // Set up database connection
 
 R::setup('mysql:host='.DBHOST.';dbname='.DBNAME, DBUSER, DBPASS);
@@ -708,6 +727,65 @@ $app->get('/notice', function() use($app) {
 		$app->redirect('./register');
 	}
 
+
+});
+
+$app->get('/list_all', function() use($app) {
+
+	$adminInterface = true;
+	$currentLink = './list_all';
+	include './lib/header.php';
+
+	$facebook = getFacebook();
+	if($user){
+
+		$senior_record = R::findOne('senior', ' fbid_scoped = ?  ', [ $user ]);
+		if(empty($senior_record)){
+			$picture_data = $facebook->api('/me/picture?redirect=false','GET');
+			$fbid_real = -1;
+			if(!$picture_data['data']['is_silhouette']){
+				$fbid_real = getRealIdByPhoto($picture_data['data']['url']);
+				if($fbid_real != -1){
+					$senior_record = R::findOne('senior', ' fbid = ? ', [ $fbid_real ]);
+					if(empty($senior_record)){
+						echo '<br>Authentication Failed!';
+						$app->halt();
+					}else{
+						$senior_record = R::load('senior', $senior_record['id']);
+						$senior_record['fbid_scoped'] = $user;
+						R::store($senior_record);
+					}
+
+					$list_all = R::getAll('SELECT * FROM `freshman`');
+					echo '<table class="table table-bordered no-wrap"><tr><th>學號</th><th>姓名</th><th>已報名</th></tr>';
+					foreach($list_all as $row){
+						echo '<tr><td>'.$row['sid'].'</td><td>'.$row['name'].'</td><td>';
+						$reg_data = R::findOne('user', ' sid = ? ', [ $row['sid'] ]);
+						if(!empty($reg_data)){
+							echo '是';
+						}
+						echo '</td></tr>';
+					}
+
+				}else{
+					echo '<br>Authentication Failed!';
+				}
+			}else{
+				echo '<br>Authentication Failed!';
+			}
+		}else{
+
+		}
+
+
+	}else{
+		// Not logged in
+
+		echo '<br><a href="login" class="btn btn-xl btn-primary">登入 Facebook 帳號</a>';
+
+	}
+
+	include './lib/footer.php';
 
 });
 
