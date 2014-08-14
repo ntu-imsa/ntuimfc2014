@@ -837,5 +837,85 @@ $app->get('/list_register', function() use($app) {
 
 });
 
+$app->get('/list_pay', function() use($app) {
+
+	$facebook = getFacebook();
+	$user = $facebook->getUser();
+
+	$_SESSION['admin'] = 1;
+
+	if($user){
+		$adminInterface = true;
+		$currentLink = './list_pay';
+		include './lib/header.php';
+
+		$senior_record = R::getRow('SELECT * FROM `senior` WHERE fbid_scoped = ? AND is_admin = 1', [ $user ]);
+
+		if(!empty($senior_record)){
+
+			$pay_record = R::getAll('SELECT * FROM `pay` ORDER BY `status` ASC');
+			// 	id 	value 	uid 	status 	bank 	name 	other 	mtime 	ctime
+			echo '<form method="POST">';
+			if($senior_record['is_acc'] == 1){
+				echo '<br><button type="submit" class="btn btn-primary">確認</button>';
+			}
+
+			echo '<br><table class="table table-bordered no-wrap"><tr><th>核對</th><th>序號</th><th>姓名</th><th>銀行</th><th>帳戶名</th><th>後五碼</th><th>其他</th><th>填寫時間</th></tr>';
+			foreach($pay_record as $pay){
+				echo '<tr><td>';
+				if($pay['status'] == 0){
+					if($senior_record['is_acc'] == 1){
+						echo '<input type="checkbox" name="confirm_pid[]" value="'.$pay['id'].'">';
+					}
+				}else{
+					echo 'O';
+				}
+				echo '</td><td>'.$pay['id'].'</td>';
+				$user_record = R::findOne('user', ' id = ? ', [$pay['uid']]);
+				echo '<td>'.$user_record['name'].'</td>';
+
+				$toList = array('bank', 'name', 'value', 'other', 'ctime');
+
+				foreach($toList as $item){
+					echo '<td>'.$pay[$item].'</td>';
+				}
+				echo '</tr>';
+			}
+			echo '</table></form>';
+
+		}else{
+			echo 'Scoped ID: '.$user.'<br>';
+		}
+
+	}else{
+		$app->redirect('login');
+	}
+});
+
+$app->post('/list_pay', function() use($app) {
+
+	$facebook = getFacebook();
+	$user = $facebook->getUser();
+
+	$_SESSION['admin'] = 1;
+
+	if($user){
+
+		$senior_record = R::getRow('SELECT * FROM `senior` WHERE fbid_scoped = ? AND is_admin = 1 AND is_acc = 1', [ $user ]);
+
+		if(!empty($senior_record)){
+
+			if(isset($_POST['confirm_pid'])){
+				foreach($_POST['confirm_pid'] as $pid){
+					R::exec("UPDATE `pay` SET `status` = 1 WHERE `id` = ?", [ $pid ]);
+				}
+				$app->redirect('list_pay');
+			}
+
+		}
+	}
+
+});
+
 $app->run();
 ?>

@@ -55,7 +55,8 @@
 						if(isset($adminInterface)){
 							$navbar = array(
 								array("./list_all", "新生列表"),
-								array("./list_register", "報名名單")
+								array("./list_register", "報名名單"),
+								array("./list_pay", "繳費核對")
 							);
 						}
 
