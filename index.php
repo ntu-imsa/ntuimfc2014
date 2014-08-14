@@ -683,6 +683,8 @@ $app->post('/pay', function() use($app){
 					$pay_record[$para] = $_POST[$para];
 				}
         $pay_record['status'] = 0;
+				$pay_record['ctime'] = R::isoDateTime();
+
         R::store($pay_record);
         echo '匯款資訊填寫成功~';
       }else{
