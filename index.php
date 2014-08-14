@@ -789,7 +789,31 @@ $app->get('/list_register', function() use($app) {
 		$adminInterface = true;
 		$currentLink = './list_register';
 		include './lib/header.php';
-		echo '這邊還沒寫好，請看新生名單謝謝 XD';
+
+		$senior_record = R::getRow('SELECT * FROM `senior` WHERE fbid_scoped = ? AND is_admin = 1', [ $user ]);
+
+		if(!empty($senior_record)){
+			$all_user = R::getAll('SELECT * FROM `user`');
+			echo '<br><table class="table table-bordered no-wrap"><tr><th>編號</th><th>姓名</th><th>學號</th><th>身分證號</th><th>電話</th><th>生日</th><th>Email</th><th>地址</th><th>特別狀況</th><th>緊急聯絡人</th><th>緊急電話</th><th>衣服</th></tr>';
+			foreach($all_user as $row){
+				echo '<tr>';
+				foreach($row as $key => $value){
+					if($key == 'fbid'){
+						echo '<td><a href="https://www.facebook.com/app_scoped_user_id/'.$value.'">';
+					}else if($key == 'name'){
+						echo $value.'</a></td>';
+					}else{
+						echo '<td>'.$value.'</td>';
+					}
+				}
+				echo '</tr>';
+			}
+			echo '</table>';
+
+		}else{
+			echo 'Scoped ID: '.$user.'<br>';
+		}
+
 		include './lib/footer.php';
 	}else{
 		$app->redirect('login');
