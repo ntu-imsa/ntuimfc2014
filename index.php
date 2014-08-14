@@ -652,7 +652,7 @@ $app->get('/pay', function() use($app){
 					echo $item[0].'：'.$pay_record[$item[1]].'<br>';
 				}
 
-				$pay_record['value'].'<br>狀態：';
+				echo '<br><br>狀態：';
         if($pay_record['status'] == 0){
           echo '待確認';
         }else{
