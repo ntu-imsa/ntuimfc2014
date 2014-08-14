@@ -799,7 +799,7 @@ $app->get('/list_register', function() use($app) {
 				echo '<tr>';
 				foreach($row as $key => $value){
 					if($key == 'fbid'){
-						echo '<td><a href="https://www.facebook.com/app_scoped_user_id/'.$value.'">';
+						echo '<td><a href="https://www.facebook.com/app_scoped_user_id/'.$value.'" target="_blank">';
 					}else if($key == 'name'){
 						echo $value.'</a></td>';
 					}else{
