@@ -639,7 +639,20 @@ $app->get('/pay', function() use($app){
         </form>
 <?php
       }else{
-        echo '你填寫的資料：'.$pay_record['value'].'<br>狀態：';
+        echo '你填寫的資料：<br>';
+
+				$forms = array(
+					array("匯款銀行", "bank"),
+					array("匯款戶名", "name"),
+					array("帳號後五碼", "value"),
+					array("其他", "other")
+				);
+
+				foreach($forms as $item){
+					echo $item[0].'：'.$pay_record[$item[1]].'<br>';
+				}
+
+				$pay_record['value'].'<br>狀態：';
         if($pay_record['status'] == 0){
           echo '待確認';
         }else{
