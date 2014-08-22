@@ -840,7 +840,7 @@ $app->get('/list_register', function() use($app) {
 				echo '</td>';
 				echo '</tr>';
 			}
-			echo '<tr><td colspan="12">總計人數：'.sizeOf($all_user).' 人</td></tr>';
+			echo '<tr><td colspan="13">總計人數：'.sizeOf($all_user).' 人</td></tr>';
 			echo '</table>';
 
 		}else{
