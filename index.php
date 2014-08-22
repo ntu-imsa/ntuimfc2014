@@ -468,7 +468,9 @@ $app->get('/register', function(){
     if(empty($user_record)){
 ?>
         <br>
-        <form method="POST" action="register">
+<?php
+		if(REG_ENABLED){
+?>        <form method="POST" action="register">
         <label>
         Facebook 帳號:</label>
         <div class="row-fluid">
@@ -527,6 +529,9 @@ echo '</td><td></td><td class="text-muted"><a target="_blank" class="btn" href="
 			<div class="modal fade" id="csize" tabindex="-1" role="dialog" aria-hidden="true">
 </div>
 <?
+		}else{
+			echo "Registration is closed.";
+		}
     }else{
       echo '<br>報名成功~記得去繳費唷~';
     }
