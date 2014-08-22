@@ -809,7 +809,7 @@ $app->get('/list_register', function() use($app) {
 
 		if(!empty($senior_record)){
 			$all_user = R::getAll('SELECT * FROM `user`');
-			echo '<br><table class="table table-bordered no-wrap"><tr><th>編號</th><th>姓名</th><th>學號</th><th>身分證號</th><th>電話</th><th>生日</th><th>Email</th><th>地址</th><th>特別狀況</th><th>緊急聯絡人</th><th>緊急電話</th><th>衣服</th></tr>';
+			echo '<br><table class="table table-bordered no-wrap"><tr><th>編號</th><th>姓名</th><th>學號</th><th>身分證號</th><th>電話</th><th>生日</th><th>Email</th><th>地址</th><th>特別狀況</th><th>緊急聯絡人</th><th>緊急電話</th><th>衣服</th><th>繳費狀況</th></tr>';
 			foreach($all_user as $row){
 				echo '<tr>';
 				foreach($row as $key => $value){
@@ -821,6 +821,18 @@ $app->get('/list_register', function() use($app) {
 						echo '<td>'.$value.'</td>';
 					}
 				}
+				echo '<td>';
+
+				$pay_record = R::getRow('SELECT * FROM `pay` WHERE `uid` = ?', [ $row['id'] ]);
+				if(empty($pay_record)){
+					// not payed yet
+				}else if($pay_record['status']==0){
+					echo '△';
+				}else if($pay_record['status']==1){
+					echo 'O';
+				}
+
+				echo '</td>';
 				echo '</tr>';
 			}
 			echo '<tr><td colspan="12">總計人數：'.sizeOf($all_user).' 人</td></tr>';
