@@ -10,6 +10,7 @@ if(file_exists('config.php')) {
 	define("DBNAME",getenv("DBNAME"));
 	define("DBUSER",getenv("DBUSER"));
 	define("DBPASS",getenv("DBPASS"));
+	define("REG_ENABLED",getenv("REG_ENABLED"));
 }
 
 require 'vendor/autoload.php';
