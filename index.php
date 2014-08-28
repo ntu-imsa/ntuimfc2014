@@ -1,6 +1,17 @@
 <?php
 session_start();
-require 'config.php';
+
+if(file_exists('config.php')) {
+	require 'config.php';
+}else{
+	define("FB_APPID",getenv("FB_APPID"));
+	define("FB_APPSECRET",getenv("FB_APPSECRET"));
+	define("DBHOST",getenv("DBHOST"));
+	define("DBNAME",getenv("DBNAME"));
+	define("DBUSER",getenv("DBUSER"));
+	define("DBPASS",getenv("DBPASS"));
+}
+
 require 'vendor/autoload.php';
 require 'rb.php';
 
