@@ -11,25 +11,6 @@ function getFacebook(){
 	return $facebook;
 }
 
-function getRealIdByPhoto($url){
-	$photo_data = explode("_", $url);
-
-	$context = stream_context_create(
-			array(
-					'http' => array(
-							'follow_location' => false
-					)
-			)
-	);
-	$html = file_get_contents('https://www.facebook.com/'.$photo_data[1], false, $context);
-	if (strpos($http_response_header['1'],'photo.php') !== false) {
-			$tmp = explode('.', $http_response_header['1']);
-			return explode('&', $tmp[6])[0];
-	}else{
-		return 0;
-	}
-}
-
 // Set up database connection
 
 R::setup('mysql:host='.DBHOST.';dbname='.DBNAME, DBUSER, DBPASS);
