@@ -428,7 +428,7 @@ foreach($deptData as $deptId => $deptDataPer){
 <?php
 });
 
-$app->get('/login', function() use($app){
+$app->get('/login', function() use($app) {
 
   $facebook = getFacebook();
   $user = $facebook->getUser();
@@ -601,7 +601,7 @@ $app->get('/logout', function() use ($app){
 
 });
 
-$app->get('/pay', function() use($app){
+$app->get('/pay', function() use($app) {
 
   $facebook = getFacebook();
   $user = $facebook->getUser();
@@ -677,7 +677,7 @@ $app->get('/pay', function() use($app){
 
 });
 
-$app->post('/pay', function() use($app){
+$app->post('/pay', function() use($app) {
 
   $facebook = getFacebook();
   $user = $facebook->getUser();
